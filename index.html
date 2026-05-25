@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="TailTheme Free — MIT React admin template with Tailwind CSS v4."
+    />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/tailtheme.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <title>TailTheme Free</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f9fafb;
+      }
+      html.dark,
+      html.dark body {
+        background-color: #0f1419;
+      }
+    </style>
+    <script>
+      (function () {
+        var key = 'tailtheme-theme';
+        var theme = localStorage.getItem(key) || 'system';
+        var dark =
+          theme === 'dark' ||
+          (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        var root = document.documentElement;
+        if (dark) {
+          root.classList.add('dark');
+          root.setAttribute('data-theme', 'dark');
+        } else {
+          root.classList.remove('dark');
+          root.setAttribute('data-theme', 'light');
+        }
+        if (/^\/app(\/|$)/.test(location.pathname)) {
+          root.setAttribute('data-app-route', '');
+          root.style.overflow = 'hidden';
+          root.style.height = '100%';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      (function () {
+        if (!/^\/app(\/|$)/.test(location.pathname)) return;
+        var el = document.documentElement;
+        var surface = el.classList.contains('dark') ? '#0f1419' : '#f9fafb';
+        document.body.style.overflow = 'hidden';
+        document.body.style.height = '100%';
+        document.body.style.backgroundColor = surface;
+        var appRoot = document.getElementById('root');
+        if (appRoot) {
+          appRoot.style.height = '100%';
+          appRoot.style.minHeight = '100%';
+        }
+      })();
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

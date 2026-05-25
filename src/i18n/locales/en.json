@@ -1,0 +1,622 @@
+{
+  "common": {
+    "loading": "Loading…",
+    "empty": "No data yet",
+    "error": "Something went wrong",
+    "retry": "Retry",
+    "language": "Language",
+    "theme": {
+      "label": "Theme",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "nav": {
+      "home": "Home",
+      "backToApp": "Back to app",
+      "dashboard": "Dashboard",
+      "dashboards": {
+        "group": "Dashboards",
+        "overview": "Overview",
+        "edu": "Edu",
+        "ecommerce": "E‑commerce",
+        "saas": "SaaS",
+        "finance": "Finance",
+        "project": "Project",
+        "health": "Healthcare",
+        "social": "Social",
+        "marketing": "Marketing",
+        "vehicle": "Vehicle"
+      },
+      "dataTable": "Data table",
+      "formWizard": "Form wizard",
+      "charts": "Charts",
+      "courses": "Courses",
+      "leaderboard": "Leaderboard",
+      "notifications": "Notifications",
+      "profile": "Profile",
+      "pricing": "Pricing",
+      "purchase": "Purchase plan",
+      "icons": "Icons",
+      "settings": "Settings",
+      "docs": "Docs",
+      "showcase": "Showcase",
+      "components": "Components",
+      "tokens": "Tokens",
+      "patterns": "Patterns",
+      "groups": {
+        "main": "Workspace",
+        "learning": "Learning",
+        "system": "System",
+        "overview": "Overview",
+        "pages": "Pages",
+        "ui": "UI Elements",
+        "docs": "Docs"
+      },
+      "themes": {
+        "edu": "Edu",
+        "ecommerce": "E-commerce",
+        "saas": "SaaS / Admin",
+        "marketing": "Marketing",
+        "social": "Social",
+        "vehicle": "Vehicle",
+        "health": "Healthcare",
+        "finance": "Finance",
+        "project": "Project",
+        "crm": "CRM",
+        "authErrors": "Auth & Errors"
+      },
+      "edu": {
+        "courses": "Courses",
+        "leaderboard": "Leaderboard",
+        "assignments": "Assignments",
+        "classes": "Classes",
+        "lessonPlayer": "Lesson player",
+        "quiz": "Quiz"
+      },
+      "ecommerce": {
+        "storefront": "Storefront",
+        "product": "Product detail",
+        "cart": "Cart",
+        "checkout": "Checkout",
+        "orders": "Orders"
+      },
+      "saas": {
+        "analytics": "Analytics",
+        "members": "Members",
+        "dataTable": "Data table",
+        "formWizard": "Form wizard",
+        "settings": "Settings",
+        "profile": "Profile"
+      },
+      "marketing": {
+        "landing": "Landing",
+        "pricing": "Pricing",
+        "about": "About",
+        "contact": "Contact",
+        "blog": "Blog"
+      },
+      "social": {
+        "feed": "Feed",
+        "messages": "Messages",
+        "notifications": "Notifications",
+        "profile": "Profile"
+      },
+      "vehicle": {
+        "listing": "Listing",
+        "detail": "Detail",
+        "booking": "Booking"
+      },
+      "health": {
+        "appointments": "Appointments",
+        "patients": "Patients",
+        "records": "Records"
+      },
+      "finance": {
+        "wallet": "Wallet",
+        "transactions": "Transactions",
+        "invoices": "Invoices",
+        "budget": "Budget"
+      },
+      "project": {
+        "kanban": "Kanban",
+        "projects": "Projects",
+        "tasks": "Tasks"
+      },
+      "authErrors": {
+        "login": "Login",
+        "register": "Register",
+        "forgot": "Forgot password",
+        "loginSplit": "Login split",
+        "registerSplit": "Register split",
+        "notFound": "404 — Not found",
+        "serverError": "500 — Server error",
+        "forbidden": "403 — Forbidden"
+      },
+      "ui": {
+        "tokens": "Styling tokens",
+        "components": "Core components",
+        "examples": "Example components",
+        "tk": {
+          "overview": "Overview",
+          "colors": "Colors",
+          "presets": "Theme presets",
+          "typography": "Typography",
+          "spacing": "Spacing",
+          "radius": "Radius",
+          "shadow": "Shadow",
+          "breakpoints": "Breakpoints"
+        },
+        "c": {
+          "button": "Button",
+          "input": "Input & Textarea",
+          "form": "Form",
+          "select": "Select & Combobox",
+          "dialog": "Dialog / Drawer",
+          "table": "Table",
+          "card": "Card",
+          "badge": "Badge & Avatar",
+          "tabs": "Tabs & Accordion",
+          "toast": "Toast & Alert",
+          "tooltip": "Tooltip",
+          "dropdownMenu": "Dropdown menu",
+          "datePicker": "Date picker",
+          "pagination": "Pagination",
+          "skeleton": "Skeleton",
+          "emptyState": "Empty state",
+          "pinInput": "PIN / OTP",
+          "fileUpload": "File upload",
+          "statCard": "Stat card",
+          "icons": "Icons",
+          "charts": "Charts"
+        },
+        "ex": {
+          "inputs": "Inputs",
+          "overlays": "Overlays",
+          "navigation": "Navigation",
+          "data": "Data display",
+          "feedback": "Feedback",
+          "layout": "Layout",
+          "patterns": "Patterns",
+          "animations": "Animations",
+          "pageTransitions": "Page transitions"
+        }
+      },
+      "docs": {
+        "gettingStarted": "Getting started",
+        "configurationTheming": "Configuration & theming",
+        "architectureRouting": "Architecture & routing"
+      }
+    },
+    "sidebar": {
+      "purchase": {
+        "title": "Get the full template",
+        "description": "Unlock all pages, components, and lifetime updates.",
+        "cta": "Purchase plan"
+      }
+    },
+    "customizer": {
+      "title": "Customize theme",
+      "description": "Pick a palette, radius, font and layout.",
+      "palette": "Color palette",
+      "primary": "Primary",
+      "accent": "Accent",
+      "radius": "Radius",
+      "font": "Font",
+      "uiScale": "UI scale",
+      "density": "Density",
+      "comfortable": "Comfortable",
+      "compact": "Compact",
+      "layout": "Layout",
+      "layoutSidebar": "Sidebar",
+      "layoutTop": "Top nav",
+      "layoutCompact": "Compact",
+      "reset": "Reset to defaults"
+    },
+    "user": {
+      "menu": "Account menu",
+      "profile": "Profile",
+      "settings": "Settings",
+      "logout": "Log out",
+      "loggedOut": "Logged out (demo)"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "new": "new",
+      "markAllRead": "Mark all read",
+      "empty": "You are all caught up."
+    },
+    "command": {
+      "placeholder": "Type a command or search…",
+      "empty": "No results found.",
+      "navigation": "Navigation",
+      "recent": "Recent",
+      "theme": "Theme",
+      "open": "Open command palette",
+      "search": "Search…"
+    },
+    "shortcuts": {
+      "title": "Keyboard shortcuts",
+      "description": "Navigate the app faster with these shortcuts.",
+      "openPalette": "Open command palette",
+      "toggleSidebar": "Toggle sidebar",
+      "showShortcuts": "Show shortcuts",
+      "close": "Close dialog / drawer",
+      "nextItem": "Next item",
+      "prevItem": "Previous item",
+      "submit": "Submit form"
+    },
+    "a11y": {
+      "skipToMain": "Skip to main content"
+    },
+    "pages": {
+      "dashboard": {
+        "title": "Dashboard",
+        "subtitle": "Cross-domain overview of your TailTheme workspace.",
+        "heroEyebrow": "Unified pulse across demos",
+        "masonryLead": "Each tile jumps to a fully themed cockpit — sizing hints at breadth of that vertical.",
+        "heroChart": "Cross-product engagement",
+        "heroChartDesc": "Learning hours vs commerce conversions (indexed)",
+        "regionMix": "Regional mix",
+        "regionMixDesc": "Active users by geography",
+        "continueLearning": "Continue learning",
+        "pickUp": "Pick up where you left off.",
+        "topLearners": "Top learners",
+        "thisWeek": "This week",
+        "today": "Calendar",
+        "pickDate": "Select a date",
+        "themeDashboards": "Theme dashboards",
+        "recentActivity": "Recent activity",
+        "recentAcross": "Across learning, storefront, SaaS org, and billing",
+        "actor": "Who",
+        "domain": "Domain",
+        "detail": "Detail",
+        "status": "Status",
+        "when": "When",
+        "presetsStrip": "Theme presets",
+        "presetsStripDesc": "Click to open presets — palettes tint charts and shell",
+        "eduCard": "Courses, streaks & assessments",
+        "commerceCard": "Storefront KPIs & orders",
+        "saasCard": "MRR · churn · members",
+        "financeCard": "Liquidity · burn · invoicing",
+        "projectCard": "Burndowns · workloads",
+        "healthCard": "Visits · patients · throughput",
+        "socialCard": "Feed · messaging · trending",
+        "marketingCard": "Traffic · pipeline · blog lift",
+        "vehicleCard": "Fleet utilization · bookings"
+      },
+      "dashboards": {
+        "edu": {
+          "title": "Edu",
+          "subtitle": "Learning KPIs and cohort progression."
+        },
+        "ecommerce": {
+          "title": "E‑commerce",
+          "subtitle": "Store KPIs and order flow."
+        },
+        "saas": {
+          "title": "SaaS",
+          "subtitle": "Subscription health & support load."
+        },
+        "finance": {
+          "title": "Finance",
+          "subtitle": "Liquidity & burn profile."
+        },
+        "project": {
+          "title": "Project",
+          "subtitle": "Delivery pacing & teamwork."
+        },
+        "crm": {
+          "title": "CRM",
+          "subtitle": "Pipeline velocity, win rate, and team quota."
+        },
+        "health": {
+          "title": "Healthcare",
+          "subtitle": "Visit volume & care mix."
+        },
+        "social": {
+          "title": "Social",
+          "subtitle": "Community vitality & inbound attention."
+        },
+        "marketing": {
+          "title": "Marketing",
+          "subtitle": "Acquisition and demand gen."
+        },
+        "vehicle": {
+          "title": "Vehicle",
+          "subtitle": "Fleet uptime and revenue pacing."
+        }
+      },
+      "login": {
+        "title": "Welcome back",
+        "subtitle": "Sign in to continue your learning journey.",
+        "noAccount": "Don't have an account?",
+        "signUp": "Sign up",
+        "forgotPassword": "Forgot password?"
+      },
+      "register": {
+        "title": "Create an account",
+        "subtitle": "Join thousands of learners today.",
+        "haveAccount": "Already have an account?",
+        "signIn": "Sign in"
+      },
+      "forgot": {
+        "title": "Reset your password",
+        "subtitle": "Enter your email and we'll send you a reset link.",
+        "backToLogin": "Back to login",
+        "sent": "Check your inbox for the reset link."
+      },
+      "auth": {
+        "backToLanding": "Back to landing",
+        "socialLabel": "Or continue with",
+        "socialLabelOauthFirst": "Continue with",
+        "dividerEmail": "Or sign in with email",
+        "dividerEmailRegister": "Or sign up with email",
+        "split": {
+          "loginHeroShort": "Sign in fast — OAuth first, email when you need it.",
+          "loginHero": "Built for teams that need speed and visual clarity.",
+          "loginFootnote": "Secure access to your workspace. One account for dashboards, courses, and themed demos.",
+          "registerHeroShort": "Create your workspace — start with OAuth or email.",
+          "registerHero": "Create your account and launch your workspace in minutes.",
+          "registerFootnote": "Create your account in minutes. Invite teammates anytime and keep everything in one place."
+        }
+      },
+      "settings": {
+        "title": "Settings",
+        "subtitle": "Manage your account, preferences and appearance.",
+        "tabs": {
+          "profile": "Profile",
+          "account": "Account",
+          "appearance": "Appearance",
+          "notifications": "Notifications",
+          "billing": "Billing",
+          "security": "Security"
+        }
+      },
+      "profile": {
+        "title": "Profile",
+        "tabs": {
+          "overview": "Overview",
+          "activity": "Activity",
+          "courses": "Courses"
+        }
+      },
+      "pricing": {
+        "title": "Plans & pricing",
+        "subtitle": "Pick a plan that fits your learning goals.",
+        "perMonth": "/ month",
+        "mostPopular": "Most popular"
+      },
+      "landing": {
+        "cta": "Get started",
+        "learnMore": "Learn more"
+      },
+      "dataTable": {
+        "title": "Data table",
+        "subtitle": "Powered by TanStack Table with sorting, filtering and pagination."
+      },
+      "formWizard": {
+        "title": "Form wizard",
+        "subtitle": "Multi-step form with validation and summary.",
+        "stepOf": "Step {{current}} of {{total}}",
+        "next": "Next",
+        "back": "Back",
+        "finish": "Finish"
+      },
+      "notifications": {
+        "title": "Notifications",
+        "subtitle": "Your recent activity and system messages."
+      },
+      "courses": {
+        "title": "Courses",
+        "subtitle": "Browse and enroll in courses.",
+        "enroll": "Enroll now",
+        "lessons": "{{count}} lessons",
+        "hours": "{{count}} hours"
+      },
+      "leaderboard": {
+        "title": "Leaderboard",
+        "subtitle": "Top learners this week.",
+        "rank": "Rank",
+        "learner": "Learner",
+        "points": "Points",
+        "streak": "Streak"
+      },
+      "errors": {
+        "notFound": {
+          "title": "404 — Page not found",
+          "description": "We couldn't find the page you were looking for.",
+          "back": "Back to dashboard"
+        },
+        "server": {
+          "title": "500 — Something broke",
+          "description": "An unexpected error occurred. Our team has been notified."
+        },
+        "forbidden": {
+          "title": "403 — Access denied",
+          "description": "You don't have permission to view this page."
+        }
+      },
+      "lesson": {
+        "outline": "Lesson outline",
+        "prev": "Previous",
+        "next": "Next lesson",
+        "exit": "Exit"
+      },
+      "quiz": {
+        "title": "Quiz",
+        "question": "Question {{current}} of {{total}}",
+        "submit": "Submit quiz",
+        "submitConfirm": "Are you sure you want to submit? You won't be able to change your answers.",
+        "timeLeft": "Time left",
+        "exit": "Exit quiz"
+      },
+      "icons": {
+        "title": "Icons",
+        "subtitle": "Lucide icons — click to copy the name.",
+        "search": "Search icons…",
+        "size": "Size",
+        "stroke": "Stroke",
+        "copied": "Copied {{name}}"
+      },
+      "charts": {
+        "title": "Charts",
+        "subtitle": "Powered by recharts using your brand palette."
+      },
+      "docs": {
+        "title": "Documentation",
+        "subtitle": "Three guides: install and tooling, configuration and theming, then architecture, routing, and where UI building blocks live."
+      }
+    },
+    "saasDash": {
+      "opsBand": "Fleet metrics",
+      "bandChartTitle": "MRR vs churn (same surface)",
+      "mrrChurnLight": "Detail view",
+      "mrrChurnDup": "Light theme chart for screenshots",
+      "plans": "Plan distribution",
+      "topAccounts": "Top accounts",
+      "members": "Members",
+      "audit": "Audit log",
+      "support": "Incidents"
+    },
+    "fiDash": {
+      "balanceLabel": "Combined balance",
+      "balanceCaption": "all accounts · MTD",
+      "openWallet": "Statement →",
+      "cashflow": "Cash flow (weekly)",
+      "cashflowSub": "k$ · consolidated",
+      "budgetStatement": "Budget ledger",
+      "budgetStatementSub": "Actual vs envelope — monospace amounts",
+      "budgetPage": "Open budget",
+      "tx": "Transactions",
+      "allocation": "Allocation",
+      "upcomingInv": "Upcoming invoices",
+      "weekBars": "Cash by week — compare"
+    },
+    "projDash": {
+      "kanbanHeroEyebrow": "Sprint board",
+      "miniKanban": "Sprint snapshot",
+      "board": "Full board",
+      "burndown": "Scope burndown",
+      "burndownSub": "Ideal vs remaining — secondary focus",
+      "weekCal": "This week",
+      "load": "Workload",
+      "loadSub": "Team capacity bars",
+      "feed": "Activity"
+    },
+    "eduDash": {
+      "pathTag": "Structured path",
+      "currPath": "Curriculum checkpoint",
+      "now": "Now",
+      "enrollment": "Enrollment vs completion",
+      "skillCoverage": "Skill coverage",
+      "skillCoverageDesc": "Cohort proficiency snapshot",
+      "ringHint": "Track — drag ring shows weekly goal",
+      "lessonsDone": "lessons",
+      "weekRail": "This week · focus",
+      "weekRailDesc": "Time-aligned agenda",
+      "reminder": "Reminder",
+      "focusCal": "Plan the sprint",
+      "quizAttempts": "Recent quiz attempts",
+      "leaderboard": "Leaderboard",
+      "fullBoard": "Full leaderboard",
+      "assignments": "Assignments due",
+      "classesCta": "Schedule"
+    },
+    "ecDash": {
+      "visualMerch": "Visual-first merchandising",
+      "inStock": "In stock",
+      "outStock": "Out of stock",
+      "heroCta": "Open storefront",
+      "horizontalFunnel": "Conversion strip",
+      "horizontalFunnelDesc": "Relative flow vs. visits",
+      "rev": "Revenue (30 days)",
+      "categories": "Category mix",
+      "masonryTitle": "Catalog highlights",
+      "orders": "Recent orders"
+    },
+    "healthDash": {
+      "today": "Today's corridor",
+      "railSub": "Time rail · demo slots",
+      "railProvider": "Provider",
+      "volume": "Appointments — by weekday",
+      "conditions": "Visit reasons",
+      "departments": "Department load",
+      "records": "Recent charts"
+    },
+    "socDash": {
+      "feedLead": "Stacked cards · sparklines synthetic",
+      "notificationCenter": "Notification center",
+      "trendPills": "Pill cloud",
+      "dmThreadHint": "Left rail · condensed",
+      "hotThreads": "Hot discussions",
+      "notifs": "Notifications inbox",
+      "engCurve": "Engagement pulse",
+      "trends": "Trending topics",
+      "messaging": "Direct threads"
+    },
+    "mkDash": {
+      "heroEyebrow": "North star",
+      "heroMetric": "Session → lead conversion (rolling 28d).",
+      "heroHint": "Compared to cohort benchmark",
+      "heroConvLabel": "Click → lead",
+      "visitorsTraffic": "Site traffic trend",
+      "visitorsTrafficSub": "Uniques aggregated weekly · demo curve",
+      "channelsBars": "Channel ranking",
+      "channelsBarsSub": "Share of acquisition",
+      "blogMagazine": "Editorial radar",
+      "blogMagazineSub": "Magazine grid · first story spans wider",
+      "funnel": "Lead funnel",
+      "liveCampaigns": "Live campaigns"
+    },
+    "vehDash": {
+      "gaugeRow": "Live utilization",
+      "tripsVolume": "Trips initiated — 30d",
+      "tripsBleed": "Full width · pickups trend",
+      "usage": "Fleet cards — plate badge",
+      "usageSub": "Top vehicles by uptime",
+      "ocLabel": "Occupancy",
+      "recent": "Recent bookings",
+      "fleetPie": "Fleet status",
+      "maintenance": "Maintenance queue",
+      "queueHint": "Next two bays · FIFO"
+    },
+    "docs": {
+      "nav": {
+        "gettingStarted": "Getting started",
+        "configurationTheming": "Configuration & theming",
+        "architectureRouting": "Architecture & routing"
+      }
+    }
+  },
+  "actions": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "search": "Search",
+    "clear": "Clear",
+    "reset": "Reset",
+    "continue": "Continue"
+  },
+  "form": {
+    "required": "Required",
+    "optional": "Optional",
+    "placeholder": {
+      "email": "Enter email",
+      "password": "Enter password",
+      "search": "Search…"
+    },
+    "errors": {
+      "required": "This field is required",
+      "email": "Invalid email",
+      "min": "Requires at least {{count}} characters",
+      "max": "Maximum {{count}} characters"
+    }
+  }
+}

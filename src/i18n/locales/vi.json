@@ -1,0 +1,623 @@
+{
+  "common": {
+    "loading": "Đang tải…",
+    "empty": "Chưa có dữ liệu",
+    "error": "Đã có lỗi xảy ra",
+    "retry": "Thử lại",
+    "language": "Ngôn ngữ",
+    "theme": {
+      "label": "Giao diện",
+      "light": "Sáng",
+      "dark": "Tối",
+      "system": "Theo hệ thống"
+    },
+    "nav": {
+      "home": "Trang chủ",
+      "backToApp": "Về ứng dụng",
+      "dashboard": "Bảng điều khiển",
+      "dashboards": {
+        "group": "Dashboard",
+        "overview": "Tổng quan",
+        "edu": "Giáo dục",
+        "ecommerce": "Thương mại điện tử",
+        "saas": "SaaS",
+        "finance": "Tài chính",
+        "project": "Dự án",
+        "crm": "CRM",
+        "health": "Y tế",
+        "social": "Mạng xã hội",
+        "marketing": "Marketing",
+        "vehicle": "Xe cộ"
+      },
+      "dataTable": "Bảng dữ liệu",
+      "formWizard": "Biểu mẫu nhiều bước",
+      "charts": "Biểu đồ",
+      "courses": "Khoá học",
+      "leaderboard": "Bảng xếp hạng",
+      "notifications": "Thông báo",
+      "profile": "Hồ sơ",
+      "pricing": "Bảng giá",
+      "purchase": "Mua template",
+      "icons": "Biểu tượng",
+      "settings": "Cài đặt",
+      "docs": "Tài liệu",
+      "showcase": "Showcase",
+      "components": "Components",
+      "tokens": "Tokens",
+      "patterns": "Patterns",
+      "groups": {
+        "main": "Workspace",
+        "learning": "Học tập",
+        "system": "Hệ thống",
+        "overview": "Tổng quan",
+        "pages": "Trang mẫu",
+        "ui": "UI Elements",
+        "docs": "Tài liệu"
+      },
+      "themes": {
+        "edu": "Giáo dục",
+        "ecommerce": "Thương mại điện tử",
+        "saas": "SaaS / Quản trị",
+        "marketing": "Marketing",
+        "social": "Mạng xã hội",
+        "vehicle": "Xe cộ",
+        "health": "Y tế",
+        "finance": "Tài chính",
+        "project": "Dự án",
+        "crm": "CRM",
+        "authErrors": "Auth & Lỗi"
+      },
+      "edu": {
+        "courses": "Khoá học",
+        "leaderboard": "Bảng xếp hạng",
+        "assignments": "Bài tập",
+        "classes": "Lớp học",
+        "lessonPlayer": "Trình phát bài học",
+        "quiz": "Bài kiểm tra"
+      },
+      "ecommerce": {
+        "storefront": "Trang chủ shop",
+        "product": "Chi tiết sản phẩm",
+        "cart": "Giỏ hàng",
+        "checkout": "Thanh toán",
+        "orders": "Đơn hàng"
+      },
+      "saas": {
+        "analytics": "Phân tích",
+        "members": "Thành viên",
+        "dataTable": "Bảng dữ liệu",
+        "formWizard": "Biểu mẫu nhiều bước",
+        "settings": "Cài đặt",
+        "profile": "Hồ sơ"
+      },
+      "marketing": {
+        "landing": "Landing",
+        "pricing": "Bảng giá",
+        "about": "Về chúng tôi",
+        "contact": "Liên hệ",
+        "blog": "Blog"
+      },
+      "social": {
+        "feed": "Bảng tin",
+        "messages": "Tin nhắn",
+        "notifications": "Thông báo",
+        "profile": "Hồ sơ"
+      },
+      "vehicle": {
+        "listing": "Danh sách xe",
+        "detail": "Chi tiết xe",
+        "booking": "Đặt xe"
+      },
+      "health": {
+        "appointments": "Lịch hẹn",
+        "patients": "Bệnh nhân",
+        "records": "Hồ sơ bệnh án"
+      },
+      "finance": {
+        "wallet": "Ví",
+        "transactions": "Giao dịch",
+        "invoices": "Hoá đơn",
+        "budget": "Ngân sách"
+      },
+      "project": {
+        "kanban": "Kanban",
+        "projects": "Dự án",
+        "tasks": "Công việc"
+      },
+      "authErrors": {
+        "login": "Đăng nhập",
+        "register": "Đăng ký",
+        "forgot": "Quên mật khẩu",
+        "loginSplit": "Đăng nhập chia cột",
+        "registerSplit": "Đăng ký chia cột",
+        "notFound": "404 — Không tìm thấy",
+        "serverError": "500 — Lỗi máy chủ",
+        "forbidden": "403 — Không có quyền"
+      },
+      "ui": {
+        "tokens": "Styling tokens",
+        "components": "Component cốt lõi",
+        "examples": "Component ví dụ",
+        "tk": {
+          "overview": "Tổng quan",
+          "colors": "Màu sắc",
+          "presets": "Bộ theme",
+          "typography": "Typography",
+          "spacing": "Khoảng cách",
+          "radius": "Bo góc",
+          "shadow": "Đổ bóng",
+          "breakpoints": "Breakpoints"
+        },
+        "c": {
+          "button": "Button",
+          "input": "Input & Textarea",
+          "form": "Form",
+          "select": "Select & Combobox",
+          "dialog": "Dialog / Drawer",
+          "table": "Table",
+          "card": "Card",
+          "badge": "Badge & Avatar",
+          "tabs": "Tabs & Accordion",
+          "toast": "Toast & Alert",
+          "tooltip": "Tooltip",
+          "dropdownMenu": "Dropdown menu",
+          "datePicker": "Date picker",
+          "pagination": "Pagination",
+          "skeleton": "Skeleton",
+          "emptyState": "Empty state",
+          "pinInput": "PIN / OTP",
+          "fileUpload": "Tải tệp lên",
+          "statCard": "Stat card",
+          "icons": "Icons",
+          "charts": "Charts"
+        },
+        "ex": {
+          "inputs": "Inputs",
+          "overlays": "Overlays",
+          "navigation": "Navigation",
+          "data": "Data display",
+          "feedback": "Feedback",
+          "layout": "Layout",
+          "patterns": "Patterns",
+          "animations": "Animations",
+          "pageTransitions": "Chuyển trang (page)"
+        }
+      },
+      "docs": {
+        "gettingStarted": "Bắt đầu",
+        "configurationTheming": "Cấu hình & giao diện",
+        "architectureRouting": "Kiến trúc & định tuyến"
+      }
+    },
+    "sidebar": {
+      "purchase": {
+        "title": "Mua trọn bộ template",
+        "description": "Mở khóa toàn bộ pages, components và cập nhật trọn đời.",
+        "cta": "Mua template"
+      }
+    },
+    "customizer": {
+      "title": "Tuỳ chỉnh giao diện",
+      "description": "Chọn bảng màu, bo góc, font và layout.",
+      "palette": "Bảng màu",
+      "primary": "Màu chính",
+      "accent": "Màu nhấn",
+      "radius": "Bo góc",
+      "font": "Phông chữ",
+      "uiScale": "Cỡ giao diện",
+      "density": "Độ dày đặc",
+      "comfortable": "Thoáng",
+      "compact": "Gọn",
+      "layout": "Bố cục",
+      "layoutSidebar": "Sidebar",
+      "layoutTop": "Thanh trên",
+      "layoutCompact": "Gọn",
+      "reset": "Khôi phục mặc định"
+    },
+    "user": {
+      "menu": "Menu tài khoản",
+      "profile": "Hồ sơ",
+      "settings": "Cài đặt",
+      "logout": "Đăng xuất",
+      "loggedOut": "Đã đăng xuất (demo)"
+    },
+    "notifications": {
+      "title": "Thông báo",
+      "new": "mới",
+      "markAllRead": "Đánh dấu đã đọc",
+      "empty": "Không có thông báo mới."
+    },
+    "command": {
+      "placeholder": "Nhập lệnh hoặc tìm kiếm…",
+      "empty": "Không có kết quả.",
+      "navigation": "Điều hướng",
+      "recent": "Gần đây",
+      "theme": "Giao diện",
+      "open": "Mở bảng lệnh",
+      "search": "Tìm…"
+    },
+    "shortcuts": {
+      "title": "Phím tắt",
+      "description": "Sử dụng phím tắt để thao tác nhanh hơn.",
+      "openPalette": "Mở bảng lệnh",
+      "toggleSidebar": "Bật/tắt sidebar",
+      "showShortcuts": "Xem phím tắt",
+      "close": "Đóng hộp thoại",
+      "nextItem": "Mục kế",
+      "prevItem": "Mục trước",
+      "submit": "Gửi biểu mẫu"
+    },
+    "a11y": {
+      "skipToMain": "Bỏ qua tới nội dung chính"
+    },
+    "pages": {
+      "dashboard": {
+        "title": "Bảng điều khiển",
+        "subtitle": "Tổng quan đa lĩnh vực trên không gian làm việc TailTheme.",
+        "heroEyebrow": "Tổng nhịp trên các bản demo",
+        "masonryLead": "Mỗi ô mở ra một cockpit có theme riêng — kích thước gợi ý phạm vi lĩnh vực.",
+        "heroChart": "Tương tác đa sản phẩm",
+        "heroChartDesc": "Giờ học so với chuyển đổi thương mại (chỉ số)",
+        "regionMix": "Phân bổ theo khu vực",
+        "regionMixDesc": "Người dùng hoạt động theo địa lý",
+        "continueLearning": "Tiếp tục học",
+        "pickUp": "Tiếp tục chỗ đang dở.",
+        "topLearners": "Học viên tiêu biểu",
+        "thisWeek": "Tuần này",
+        "today": "Lịch",
+        "pickDate": "Chọn ngày",
+        "themeDashboards": "Dashboard theo theme",
+        "recentActivity": "Hoạt động gần đây",
+        "recentAcross": "Giữa học tập, shop, SaaS và thanh toán",
+        "actor": "Ai",
+        "domain": "Lĩnh vực",
+        "detail": "Chi tiết",
+        "status": "Trạng thái",
+        "when": "Thời điểm",
+        "presetsStrip": "Bộ theme có sẵn",
+        "presetsStripDesc": "Bấm để mở trang presets — tinh chỉnh biểu đồ và shell",
+        "eduCard": "Khoá học, streak & bài kiểm tra",
+        "commerceCard": "Chỉ số storefront & đơn hàng",
+        "saasCard": "MRR · churn · thành viên",
+        "financeCard": "Thanh khoản · burn · hoá đơn",
+        "projectCard": "Burndown & khối lượng công việc",
+        "healthCard": "Lượt khám · bệnh nhân · throughput",
+        "socialCard": "Feed · tin nhắn · trending",
+        "marketingCard": "Traffic · pipeline · blog",
+        "vehicleCard": "Tận dụng đội xe · đặt chỗ"
+      },
+      "dashboards": {
+        "edu": {
+          "title": "Giáo dục",
+          "subtitle": "Chỉ số học tập và tiến độ lớp."
+        },
+        "ecommerce": {
+          "title": "Thương mại điện tử",
+          "subtitle": "Chỉ số cửa hàng và luồng đơn."
+        },
+        "saas": {
+          "title": "SaaS",
+          "subtitle": "Sức khoẻ đăng ký và tải support."
+        },
+        "finance": {
+          "title": "Tài chính",
+          "subtitle": "Thanh khoản và hồ sơ burn."
+        },
+        "project": {
+          "title": "Dự án",
+          "subtitle": "Nhịp giao & phối hợp nhóm."
+        },
+        "crm": {
+          "title": "CRM",
+          "subtitle": "Tốc độ pipeline, tỷ lệ thắng và quota nhóm."
+        },
+        "health": {
+          "title": "Y tế",
+          "subtitle": "Khối lượt khám & hỗn hợp điều trị."
+        },
+        "social": {
+          "title": "Mạng xã hội",
+          "subtitle": "Sinh động cộng đồng và tương tác vào."
+        },
+        "marketing": {
+          "title": "Marketing",
+          "subtitle": "Tiếp cận và tạo nhu cầu."
+        },
+        "vehicle": {
+          "title": "Xe cộ",
+          "subtitle": "Uptime đội xe và doanh thu theo ngày."
+        }
+      },
+      "login": {
+        "title": "Chào mừng trở lại",
+        "subtitle": "Đăng nhập để tiếp tục học.",
+        "noAccount": "Chưa có tài khoản?",
+        "signUp": "Đăng ký",
+        "forgotPassword": "Quên mật khẩu?"
+      },
+      "register": {
+        "title": "Tạo tài khoản",
+        "subtitle": "Tham gia cùng hàng ngàn học viên khác.",
+        "haveAccount": "Đã có tài khoản?",
+        "signIn": "Đăng nhập"
+      },
+      "forgot": {
+        "title": "Đặt lại mật khẩu",
+        "subtitle": "Nhập email để nhận liên kết đặt lại mật khẩu.",
+        "backToLogin": "Quay lại đăng nhập",
+        "sent": "Vui lòng kiểm tra email để đặt lại mật khẩu."
+      },
+      "auth": {
+        "backToLanding": "Về landing",
+        "socialLabel": "Hoặc tiếp tục với",
+        "socialLabelOauthFirst": "Tiếp tục với",
+        "dividerEmail": "Hoặc đăng nhập bằng email",
+        "dividerEmailRegister": "Hoặc đăng ký bằng email",
+        "split": {
+          "loginHeroShort": "Đăng nhập nhanh — OAuth trước, email khi cần.",
+          "loginHero": "Dành cho đội cần tốc độ và giao diện rõ ràng.",
+          "loginFootnote": "Truy cập an toàn vào workspace của bạn. Một tài khoản cho dashboard, khóa học và bản demo theme.",
+          "registerHeroShort": "Tạo workspace — bắt đầu bằng OAuth hoặc email.",
+          "registerHero": "Tạo tài khoản và khởi chạy workspace trong vài phút.",
+          "registerFootnote": "Tạo tài khoản trong vài phút. Mời đồng đội bất cứ lúc nào và giữ mọi thứ ở một nơi."
+        }
+      },
+      "settings": {
+        "title": "Cài đặt",
+        "subtitle": "Quản lý tài khoản, tuỳ chọn và giao diện.",
+        "tabs": {
+          "profile": "Hồ sơ",
+          "account": "Tài khoản",
+          "appearance": "Giao diện",
+          "notifications": "Thông báo",
+          "billing": "Thanh toán",
+          "security": "Bảo mật"
+        }
+      },
+      "profile": {
+        "title": "Hồ sơ",
+        "tabs": {
+          "overview": "Tổng quan",
+          "activity": "Hoạt động",
+          "courses": "Khoá học"
+        }
+      },
+      "pricing": {
+        "title": "Gói & giá",
+        "subtitle": "Chọn gói phù hợp với mục tiêu của bạn.",
+        "perMonth": "/ tháng",
+        "mostPopular": "Phổ biến nhất"
+      },
+      "landing": {
+        "cta": "Bắt đầu ngay",
+        "learnMore": "Tìm hiểu thêm"
+      },
+      "dataTable": {
+        "title": "Bảng dữ liệu",
+        "subtitle": "Dùng TanStack Table với sắp xếp, lọc và phân trang."
+      },
+      "formWizard": {
+        "title": "Biểu mẫu nhiều bước",
+        "subtitle": "Form nhiều bước với kiểm tra và tóm tắt.",
+        "stepOf": "Bước {{current}} / {{total}}",
+        "next": "Tiếp",
+        "back": "Quay lại",
+        "finish": "Hoàn tất"
+      },
+      "notifications": {
+        "title": "Thông báo",
+        "subtitle": "Hoạt động gần đây và tin nhắn hệ thống."
+      },
+      "courses": {
+        "title": "Khoá học",
+        "subtitle": "Duyệt và đăng ký khoá học.",
+        "enroll": "Đăng ký ngay",
+        "lessons": "{{count}} bài",
+        "hours": "{{count}} giờ"
+      },
+      "leaderboard": {
+        "title": "Bảng xếp hạng",
+        "subtitle": "Học viên nổi bật tuần này.",
+        "rank": "Hạng",
+        "learner": "Học viên",
+        "points": "Điểm",
+        "streak": "Chuỗi"
+      },
+      "errors": {
+        "notFound": {
+          "title": "404 — Không tìm thấy trang",
+          "description": "Không tìm thấy trang bạn yêu cầu.",
+          "back": "Về bảng điều khiển"
+        },
+        "server": {
+          "title": "500 — Có lỗi xảy ra",
+          "description": "Đã xảy ra lỗi không mong muốn. Đội ngũ đã được thông báo."
+        },
+        "forbidden": {
+          "title": "403 — Không có quyền",
+          "description": "Bạn không có quyền truy cập trang này."
+        }
+      },
+      "lesson": {
+        "outline": "Nội dung bài học",
+        "prev": "Bài trước",
+        "next": "Bài tiếp",
+        "exit": "Thoát"
+      },
+      "quiz": {
+        "title": "Bài kiểm tra",
+        "question": "Câu {{current}} / {{total}}",
+        "submit": "Nộp bài",
+        "submitConfirm": "Bạn chắc chắn muốn nộp bài? Bạn sẽ không thể sửa đổi sau khi gửi.",
+        "timeLeft": "Thời gian còn lại",
+        "exit": "Thoát bài kiểm tra"
+      },
+      "icons": {
+        "title": "Biểu tượng",
+        "subtitle": "Bộ Lucide icons — nhấn để sao chép tên.",
+        "search": "Tìm biểu tượng…",
+        "size": "Kích thước",
+        "stroke": "Độ dày",
+        "copied": "Đã sao chép {{name}}"
+      },
+      "charts": {
+        "title": "Biểu đồ",
+        "subtitle": "Dùng recharts với bảng màu thương hiệu của bạn."
+      },
+      "docs": {
+        "title": "Tài liệu",
+        "subtitle": "Ba hướng dẫn: cài đặt & công cụ, cấu hình & giao diện, rồi kiến trúc, routing và nơi các khối UI nằm trong app."
+      }
+    },
+    "saasDash": {
+      "opsBand": "Chỉ số hạ tầng dịch vụ",
+      "bandChartTitle": "MRR so với churn (cùng bề mặt)",
+      "mrrChurnLight": "Khung chi tiết",
+      "mrrChurnDup": "Biểu đồ sáng — phù hợp screenshot",
+      "plans": "Phân phối gói",
+      "topAccounts": "Khách hàng tiêu biểu",
+      "members": "Thành viên",
+      "audit": "Nhật ký kiểm toán",
+      "support": "Sự cố"
+    },
+    "fiDash": {
+      "balanceLabel": "Số dư gộp",
+      "balanceCaption": "toàn bộ tài khoản · tháng này",
+      "openWallet": "Tới sao kê →",
+      "cashflow": "Dòng tiền (theo tuần)",
+      "cashflowSub": "nghìn USD · gộp",
+      "budgetStatement": "Sổ nhật ký ngân sách",
+      "budgetStatementSub": "Thực tế và gói dự chi — so sánh số monospace",
+      "budgetPage": "Mở ngân sách",
+      "tx": "Giao dịch",
+      "allocation": "Phân bổ",
+      "upcomingInv": "Hoá đơn sắp đến hạn",
+      "weekBars": "Tiền mặt theo tuần — đối chiếu"
+    },
+    "projDash": {
+      "kanbanHeroEyebrow": "Board sprint",
+      "miniKanban": "Ảnh nhanh sprint",
+      "board": "Board đầy đủ",
+      "burndown": "Đốt backlog",
+      "burndownSub": "Đường lý thuyết so với còn lại — ưu tiên phụ",
+      "weekCal": "Tuần này",
+      "load": "Tải nhóm",
+      "loadSub": "Thanh năng lực theo người",
+      "feed": "Hoạt động"
+    },
+    "eduDash": {
+      "pathTag": "Luồng có cấu trúc",
+      "currPath": "Điểm nhật ký trong chương trình",
+      "now": "Hiện tại",
+      "enrollment": "Ghi danh và hoàn thành",
+      "skillCoverage": "Phạm vi kỹ năng",
+      "skillCoverageDesc": "Snap shot thành thạo theo cohort",
+      "ringHint": "Đường kính — vành chỉ tiến độ tuần",
+      "lessonsDone": "bài học",
+      "weekRail": "Tuần này · tiêu điểm",
+      "weekRailDesc": "Lịch theo trục thời gian",
+      "reminder": "Nhắc",
+      "focusCal": "Lên kế hoạch sprint",
+      "quizAttempts": "Lượt làm quiz gần đây",
+      "leaderboard": "Bảng xếp hạng",
+      "fullBoard": "Bảng đầy đủ",
+      "assignments": "Bài tập sắp hạn",
+      "classesCta": "Lịch lớp"
+    },
+    "ecDash": {
+      "visualMerch": "Trưng bày ưu tiên hình ảnh",
+      "inStock": "Còn hàng",
+      "outStock": "Hết hàng",
+      "heroCta": "Mở cửa hàng",
+      "horizontalFunnel": "Thanh funnel",
+      "horizontalFunnelDesc": "Luồng so với lượt truy cập",
+      "rev": "Doanh thu (30 ngày)",
+      "categories": "Tổ hợp danh mục",
+      "masonryTitle": "Sản phẩm nổi bật",
+      "orders": "Đơn gần đây"
+    },
+    "healthDash": {
+      "today": "Hành lang hôm nay",
+      "railSub": "Trục thời gian · slot demo",
+      "railProvider": "Bác sĩ",
+      "volume": "Lịch hẹn — theo ngày trong tuần",
+      "conditions": "Lý do khám",
+      "departments": "Tải khoa",
+      "records": "Bệnh án gần đây"
+    },
+    "socDash": {
+      "feedLead": "Thẻ xếp chồng · sparkline minh hoạ",
+      "notificationCenter": "Trung tâm thông báo",
+      "trendPills": "Đám tag trending",
+      "dmThreadHint": "Ray trái · gọn",
+      "hotThreads": "Luồng thảo luận nóng",
+      "notifs": "Hộp thông báo",
+      "engCurve": "Nhịp tương tác",
+      "trends": "Chủ đề trending",
+      "messaging": "Luồng tin nhắn riêng"
+    },
+    "mkDash": {
+      "heroEyebrow": "Chỉ số cực Nam",
+      "heroMetric": "Chuyển đổi phiên → lead (rolling 28 ngày).",
+      "heroHint": "So với chuẩn cohort",
+      "heroConvLabel": "Click → lead",
+      "visitorsTraffic": "Xu hướng traffic site",
+      "visitorsTrafficSub": "Uniques gộp theo tuần · đường demo",
+      "channelsBars": "Xếp hạng kênh",
+      "channelsBarsSub": "Tỉ lệ trong mix tiếp cận",
+      "blogMagazine": "Radar bài Editorial",
+      "blogMagazineSub": "Magazine grid · bài đầu rộng hơn",
+      "funnel": "Phễu lead",
+      "liveCampaigns": "Chiến dịch đang chạy"
+    },
+    "vehDash": {
+      "gaugeRow": "Tận dụng realtime",
+      "tripsVolume": "Chuyến khởi tạo — 30 ngày",
+      "tripsBleed": "Toàn chiều ngang · xu hướng pickup",
+      "usage": "Thẻ xe — biển số nổi",
+      "usageSub": "Xe top theo uptime",
+      "ocLabel": "Lấp đầy",
+      "recent": "Đặt xe gần đây",
+      "fleetPie": "Trạng thái đội xe",
+      "maintenance": "Hàng đợi bảo dưỡng",
+      "queueHint": "Hai xưởng kế · FIFO"
+    },
+    "docs": {
+      "nav": {
+        "gettingStarted": "Bắt đầu",
+        "configurationTheming": "Cấu hình & giao diện",
+        "architectureRouting": "Kiến trúc & định tuyến"
+      }
+    }
+  },
+  "actions": {
+    "save": "Lưu",
+    "cancel": "Huỷ",
+    "confirm": "Xác nhận",
+    "delete": "Xoá",
+    "edit": "Sửa",
+    "close": "Đóng",
+    "back": "Quay lại",
+    "next": "Tiếp",
+    "submit": "Gửi",
+    "search": "Tìm kiếm",
+    "clear": "Xoá bộ lọc",
+    "reset": "Đặt lại",
+    "continue": "Tiếp tục"
+  },
+  "form": {
+    "required": "Bắt buộc",
+    "optional": "Tuỳ chọn",
+    "placeholder": {
+      "email": "Nhập email",
+      "password": "Nhập mật khẩu",
+      "search": "Tìm kiếm…"
+    },
+    "errors": {
+      "required": "Trường này là bắt buộc",
+      "email": "Email không hợp lệ",
+      "min": "Cần tối thiểu {{count}} ký tự",
+      "max": "Tối đa {{count}} ký tự"
+    }
+  }
+}

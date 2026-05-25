@@ -1,0 +1,700 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Outfit:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *, [data-theme='dark'] *));
+
+/*
+  TailTheme palette (hex) — preserve the original color system.
+  shadcn tokens (background, primary, border, ...) point to the same values so components using classes like bg-background / border-border stay consistent with the system palette.
+*/
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Outfit', sans-serif;
+
+  --color-brand-blue: #1b6ca1;
+  --color-brand-yellow: #f05123;
+  --color-brand-blue-dark: #145078;
+
+  --color-surface: #f9fafb;
+  --color-surface-muted: #f3f4f6;
+  --color-surface-soft: #f2f4f4;
+  --color-surface-line: #ebeeef;
+  --color-text-strong: #1a1a1a;
+  --color-text-default: #1f2937;
+  --color-text-muted: #757c7d;
+  --color-text-subtle: #9ca3af;
+  --color-text-faint: #a1a1a1;
+
+  --color-brand: var(--color-brand-blue);
+  --color-brand-foreground: #ffffff;
+  --color-brand-muted: #9ca3af;
+  --color-brand-hover: var(--color-brand-blue-dark);
+  --color-brand-dark: var(--color-brand-blue-dark);
+  /** Darker brand for inline links and text — meets WCAG AA on light surfaces (see ColorsPage). */
+  --color-text-brand: hsl(205 70% 28%);
+
+  --color-neutral-650: #636363;
+  --color-neutral-700: #4d4d4d;
+  --color-border-muted: #adb3b4;
+
+  --color-danger: #991b1b;
+  --color-danger-bg: #fef2f2;
+  --color-danger-border: #fee2e2;
+  --color-danger-text: #b91c1c;
+  --color-danger-action: #a64444;
+  --color-danger-action-hover: #8b3a3a;
+  --color-success: #166534;
+  --color-success-bg: #f0fdf4;
+  --color-success-border: #dcfce7;
+  --color-success-text: #15803d;
+  --color-warning: var(--color-brand-yellow);
+  --color-info: var(--color-brand-blue);
+
+  /*
+    Generated brand & status scales 50-950.
+    The values below act as static fallbacks so utilities like
+    `bg-primary-100` or `text-success-700` work even before
+    `PreferencesProvider` runs. At runtime, `applyToRoot()` writes the same
+    properties with values matching the active preset.
+  */
+  --color-primary-50: hsl(205 38% 97%);
+  --color-primary-100: hsl(205 42% 93%);
+  --color-primary-200: hsl(205 49% 86%);
+  --color-primary-300: hsl(205 60% 75%);
+  --color-primary-400: hsl(205 67% 62%);
+  --color-primary-500: hsl(205 70% 48%);
+  --color-primary-600: hsl(205 70% 38%);
+  --color-primary-700: hsl(205 67% 30%);
+  --color-primary-800: hsl(205 64% 24%);
+  --color-primary-900: hsl(205 62% 18%);
+  --color-primary-950: hsl(205 60% 12%);
+
+  --color-accent-50: hsl(16 47% 97%);
+  --color-accent-100: hsl(16 52% 93%);
+  --color-accent-200: hsl(16 60% 86%);
+  --color-accent-300: hsl(16 73% 75%);
+  --color-accent-400: hsl(16 82% 62%);
+  --color-accent-500: hsl(16 86% 48%);
+  --color-accent-600: hsl(16 86% 38%);
+  --color-accent-700: hsl(16 83% 30%);
+  --color-accent-800: hsl(16 79% 24%);
+  --color-accent-900: hsl(16 76% 18%);
+  --color-accent-950: hsl(16 73% 12%);
+
+  --color-success-50: hsl(142 39% 97%);
+  --color-success-100: hsl(142 42% 93%);
+  --color-success-200: hsl(142 49% 86%);
+  --color-success-300: hsl(142 60% 75%);
+  --color-success-400: hsl(142 67% 62%);
+  --color-success-500: hsl(142 70% 48%);
+  --color-success-600: hsl(142 70% 38%);
+  --color-success-700: hsl(142 67% 30%);
+  --color-success-800: hsl(142 64% 24%);
+  --color-success-900: hsl(142 62% 18%);
+  --color-success-950: hsl(142 60% 12%);
+
+  --color-warning-50: hsl(38 51% 97%);
+  --color-warning-100: hsl(38 55% 93%);
+  --color-warning-200: hsl(38 64% 86%);
+  --color-warning-300: hsl(38 78% 75%);
+  --color-warning-400: hsl(38 87% 62%);
+  --color-warning-500: hsl(38 92% 48%);
+  --color-warning-600: hsl(38 92% 38%);
+  --color-warning-700: hsl(38 88% 30%);
+  --color-warning-800: hsl(38 85% 24%);
+  --color-warning-900: hsl(38 81% 18%);
+  --color-warning-950: hsl(38 78% 12%);
+
+  --color-info-50: hsl(200 46% 97%);
+  --color-info-100: hsl(200 50% 93%);
+  --color-info-200: hsl(200 59% 86%);
+  --color-info-300: hsl(200 71% 75%);
+  --color-info-400: hsl(200 80% 62%);
+  --color-info-500: hsl(200 84% 48%);
+  --color-info-600: hsl(200 84% 38%);
+  --color-info-700: hsl(200 81% 30%);
+  --color-info-800: hsl(200 77% 24%);
+  --color-info-900: hsl(200 74% 18%);
+  --color-info-950: hsl(200 71% 12%);
+
+  --color-danger-50: hsl(0 43% 97%);
+  --color-danger-100: hsl(0 47% 93%);
+  --color-danger-200: hsl(0 55% 86%);
+  --color-danger-300: hsl(0 66% 75%);
+  --color-danger-400: hsl(0 74% 62%);
+  --color-danger-500: hsl(0 78% 48%);
+  --color-danger-600: hsl(0 78% 38%);
+  --color-danger-700: hsl(0 75% 30%);
+  --color-danger-800: hsl(0 72% 24%);
+  --color-danger-900: hsl(0 69% 18%);
+  --color-danger-950: hsl(0 66% 12%);
+  --color-accent-soft: #fef2f2;
+  --color-icon-muted: #5f5e61;
+  --color-badge-soft: #d1d5db;
+  --color-avatar-amber: #fde68a;
+  --color-avatar-pink: #fbcfe8;
+  --color-avatar-gray: #e5e7eb;
+  --color-avatar-orange: #fdba74;
+
+  /* shadcn semantic tokens share the TailTheme palette */
+  --color-background: var(--color-surface);
+  --color-foreground: var(--color-text-default);
+  --color-card: #ffffff;
+  --color-card-foreground: var(--color-text-default);
+  --color-popover: #ffffff;
+  --color-popover-foreground: var(--color-text-default);
+  --color-primary: var(--color-brand-blue);
+  --color-primary-foreground: #ffffff;
+  --color-secondary: var(--color-surface-muted);
+  --color-secondary-foreground: var(--color-text-default);
+  --color-muted: var(--color-surface-muted);
+  --color-muted-foreground: var(--color-text-muted);
+  --color-accent: var(--color-brand-yellow);
+  --color-accent-foreground: #ffffff;
+  --color-destructive: var(--color-danger);
+  --color-destructive-foreground: #ffffff;
+  --color-border: var(--color-surface-line);
+  /*
+    Form control stroke: stronger than layout dividers (`--color-border`) so inputs,
+    selects, and triggers stay visible on `background` and `card` (WCAG edge contrast).
+  */
+  --color-input: var(--color-badge-soft);
+  --color-ring: var(--color-brand-blue);
+  --color-chart-1: var(--color-brand-blue);
+  --color-chart-2: #2dd4bf;
+  --color-chart-3: #6366f1;
+  --color-chart-4: #fbbf24;
+  --color-chart-5: #f97316;
+  /* Match app shell header (`bg-card`) so sidebar chrome does not read as a gray strip. */
+  --color-sidebar: var(--color-card);
+  --color-sidebar-foreground: var(--color-text-default);
+  --color-sidebar-primary: var(--color-brand-blue);
+  --color-sidebar-primary-foreground: #ffffff;
+  --color-sidebar-accent: var(--color-surface-muted);
+  --color-sidebar-accent-foreground: var(--color-text-default);
+  --color-sidebar-border: var(--color-input);
+  --color-sidebar-ring: var(--color-brand-blue);
+
+  --radius: 0.75rem;
+  --radius-button: 0.75rem;
+  --radius-card: 1rem;
+  --radius-input: 0.75rem;
+  --radius-xl2: 1rem;
+  --radius-xl3: 1.5rem;
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --shadow-sm: 0 1px 2px 0 rgb(235 238 239 / 0.5);
+  --shadow: 0 2px 4px -1px rgb(235 238 239 / 0.6), 0 1px 2px -1px rgb(235 238 239 / 0.4);
+  --shadow-md: 0 4px 6px -1px rgb(235 238 239 / 0.7), 0 2px 4px -2px rgb(235 238 239 / 0.5);
+  --shadow-lg: 0 10px 15px -3px rgb(235 238 239 / 0.6), 0 4px 6px -4px rgb(235 238 239 / 0.4);
+  --shadow-xl: 0 20px 25px -5px rgb(235 238 239 / 0.5), 0 8px 10px -6px rgb(235 238 239 / 0.3);
+  --shadow-2xl: 0 25px 50px -12px rgb(235 238 239 / 0.6);
+
+  --animate-tt-collapsible-down: tt-collapsible-down 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-tt-collapsible-up: tt-collapsible-up 180ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  --duration-instant: 0ms;
+  --duration-fast: 100ms;
+  --duration-base: 200ms;
+  --duration-slow: 300ms;
+  --duration-slower: 500ms;
+  --duration-slowest: 700ms;
+
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --opacity-disabled: 0.38;
+  --opacity-muted: 0.5;
+  --opacity-subtle: 0.12;
+  --opacity-overlay: 0.6;
+
+  --z-below: -1;
+  --z-base: 0;
+  --z-raised: 10;
+  --z-dropdown: 1000;
+  --z-sticky: 1100;
+  --z-banner: 1200;
+  --z-overlay: 1300;
+  --z-modal: 1400;
+  --z-popover: 1500;
+  --z-toast: 1600;
+  --z-tooltip: 1700;
+
+  --blur-sm: 4px;
+  --blur-md: 8px;
+  --blur-lg: 16px;
+  --blur-xl: 24px;
+  --blur-glass: blur(12px) saturate(1.8);
+
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+  --breakpoint-2xl: 96rem;
+}
+
+.dark {
+  --color-surface: #0f1419;
+  --color-surface-muted: #1a222c;
+  --color-surface-soft: #151c24;
+  --color-surface-line: #2a3441;
+  --color-text-strong: #f3f4f6;
+  --color-text-default: #e5e7eb;
+  --color-text-muted: #9ca3af;
+  --color-text-subtle: #6b7280;
+  --color-text-faint: #6b7280;
+
+  --color-card: #151c24;
+  --color-card-foreground: #e5e7eb;
+  --color-popover: #151c24;
+  --color-popover-foreground: #e5e7eb;
+
+  --color-background: var(--color-surface);
+  --color-foreground: var(--color-text-default);
+  --color-muted: var(--color-surface-muted);
+  --color-muted-foreground: var(--color-text-muted);
+  --color-secondary: var(--color-surface-muted);
+  --color-secondary-foreground: var(--color-text-default);
+  --color-border: var(--color-surface-line);
+  /* Slightly brighter than `--color-border` on dark surfaces so triggers read as controls. */
+  --color-input: #4b5563;
+  --color-sidebar: var(--color-card);
+  --color-sidebar-foreground: var(--color-text-default);
+  --color-sidebar-accent: var(--color-surface-muted);
+  --color-sidebar-accent-foreground: var(--color-text-default);
+  --color-sidebar-border: var(--color-input);
+
+  --color-text-brand: hsl(205 70% 62%);
+
+  --color-danger-bg: #3f1a1a;
+  --color-danger-border: #5c2626;
+  --color-success-bg: #0f2419;
+  --color-success-border: #14532d;
+
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.4);
+  --shadow: 0 2px 4px -1px rgb(0 0 0 / 0.45), 0 1px 2px -1px rgb(0 0 0 / 0.35);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.45), 0 2px 4px -2px rgb(0 0 0 / 0.35);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.45), 0 4px 6px -4px rgb(0 0 0 / 0.35);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.3);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.55);
+}
+
+@keyframes toast-progress {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes tt-collapsible-down {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-collapsible-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes tt-collapsible-up {
+  from {
+    height: var(--radix-collapsible-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@layer base {
+  html {
+    /* Default base font-size; `PreferencesProvider` overrides this
+       via inline style based on the `uiScale` preference. */
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    /*
+      Non-static positioning lets Motion's `useScroll` (default container =
+      `document.scrollingElement`) measure offsets without dev warnings. Pure
+      `static` on <html> is common browser default but triggers:
+      "Please ensure that the container has a non-static position…"
+    */
+    position: relative;
+  }
+
+  body {
+    @apply font-sans bg-surface text-text-default antialiased;
+  }
+
+  a:not([class]) {
+    @apply text-text-brand underline-offset-4 hover:underline;
+  }
+
+  /*
+    Reserve scrollbar width on document-scroll pages so Radix scroll lock
+    does not shift layout. App shell (`data-app-shell`) scrolls internally —
+    do not reserve a document gutter or a blank strip appears beside the header.
+    `data-app-route` is set in index.html for /app paths before React mounts.
+  */
+  @supports (scrollbar-gutter: stable) {
+    html:where(:not(:has([data-app-shell]))):not([data-app-route]) {
+      scrollbar-gutter: stable;
+    }
+
+    html:has([data-app-shell]),
+    html[data-app-route] {
+      scrollbar-gutter: auto;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    html:has([data-app-shell]) body,
+    html[data-app-route] body {
+      overflow: hidden;
+      height: 100%;
+    }
+
+    html:has([data-app-shell]) #root,
+    html[data-app-route] #root {
+      height: 100%;
+      min-height: 100%;
+    }
+
+    body[data-scroll-locked] {
+      margin-right: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    body[data-scroll-locked] .right-scroll-bar-position {
+      right: 0 !important;
+    }
+
+    body[data-scroll-locked] .width-before-scroll-bar {
+      margin-right: 0 !important;
+    }
+  }
+
+  @supports not (scrollbar-gutter: stable) {
+    html:where(:not(:has([data-app-shell]))):not([data-app-route]) {
+      overflow-y: scroll;
+    }
+
+    html:has([data-app-shell]),
+    html[data-app-route] {
+      overflow: hidden;
+      height: 100%;
+    }
+
+    html:has([data-app-shell]) body,
+    html[data-app-route] body {
+      overflow: hidden;
+      height: 100%;
+    }
+
+    html:has([data-app-shell]) #root,
+    html[data-app-route] #root {
+      height: 100%;
+      min-height: 100%;
+    }
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-surface-line) transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-surface-line);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-border-muted);
+  }
+
+  h1 {
+    @apply font-display text-4xl font-extrabold tracking-tight text-text-strong;
+  }
+  h2 {
+    @apply font-display text-3xl font-bold tracking-tight text-text-strong;
+  }
+  h3 {
+    @apply font-display text-2xl font-bold text-text-strong;
+  }
+  h4 {
+    @apply font-display text-xl font-semibold text-text-strong;
+  }
+  h5 {
+    @apply font-display text-lg font-semibold text-text-default;
+  }
+  h6 {
+    @apply font-display text-base font-semibold text-text-default;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand;
+  }
+}
+
+@layer components {
+  .section-label {
+    @apply text-xs font-bold uppercase tracking-[0.2em] text-text-subtle;
+  }
+
+  .link-subtle {
+    @apply text-[10px] font-bold uppercase tracking-widest text-text-subtle transition-colors hover:text-text-brand;
+  }
+
+  .text-display {
+    @apply font-display text-5xl font-bold leading-tight tracking-tight text-text-strong md:text-6xl;
+  }
+  .text-h1 {
+    @apply font-display text-4xl font-bold leading-tight tracking-tight text-text-strong;
+  }
+  .text-h2 {
+    @apply font-display text-3xl font-bold leading-snug tracking-tight text-text-strong;
+  }
+  .text-h3 {
+    @apply font-display text-2xl font-bold leading-snug text-text-strong;
+  }
+  .text-h4 {
+    @apply font-display text-xl font-semibold text-text-strong;
+  }
+  .text-h5 {
+    @apply font-display text-lg font-semibold text-text-default;
+  }
+  .text-h6 {
+    @apply font-display text-base font-semibold text-text-default;
+  }
+  .text-body-lg {
+    @apply text-lg leading-relaxed text-text-default;
+  }
+  .text-body {
+    @apply text-base leading-normal text-text-default;
+  }
+  .text-body-sm {
+    @apply text-sm leading-normal text-text-default;
+  }
+  .text-label {
+    @apply text-sm font-medium text-text-default;
+  }
+  .text-caption {
+    @apply text-xs leading-normal text-text-muted;
+  }
+  .text-overline {
+    @apply text-xs font-semibold uppercase tracking-widest text-text-subtle;
+  }
+  .text-code {
+    @apply font-mono text-[0.9em] text-text-default;
+  }
+
+  .container-main {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .glassmorphism {
+    @apply border border-white/20 bg-white/70 shadow-lg backdrop-blur-md;
+  }
+  .center-flex {
+    @apply flex items-center justify-center;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--color-surface-line);
+    border-radius: 9999px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-border-muted);
+  }
+
+  /*
+   * Deprecated compatibility helpers — retained so older template pages (library/*, collections/*,
+   * profile, devices, dashboard, home placeholders) keep rendering while the Design System
+   * showcase demonstrates the canonical new primitives. Prefer the new components from
+   * `@/components/ui` in any new code.
+   */
+  .btn-base {
+    @apply inline-flex cursor-pointer select-none items-center justify-center gap-1.5 rounded-lg px-4 py-2 text-sm font-semibold transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply bg-primary text-primary-foreground shadow-sm hover:bg-brand-hover active:scale-[0.98] focus-visible:outline-brand;
+  }
+  .btn-secondary {
+    @apply border border-border bg-card text-foreground shadow-sm hover:bg-muted active:bg-surface-soft focus-visible:outline-brand;
+  }
+  .btn-ghost {
+    @apply bg-transparent text-muted-foreground hover:bg-muted hover:text-foreground active:bg-surface-soft focus-visible:outline-brand;
+  }
+  .btn-danger {
+    @apply bg-danger-action text-white shadow-sm hover:bg-danger-action-hover active:bg-danger focus-visible:outline-danger;
+  }
+  .btn-danger-fill {
+    @apply bg-red-600 text-white hover:bg-red-700 focus-visible:outline-danger;
+  }
+  .btn-icon {
+    @apply inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-card text-muted-foreground shadow-sm transition-all hover:bg-muted hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand;
+  }
+
+  .input-field {
+    @apply w-full rounded-lg border border-transparent bg-surface-soft px-4 py-2 text-sm text-foreground outline-none transition-all duration-200 placeholder:text-text-subtle focus:ring-2 focus:ring-border disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .label-base {
+    @apply mb-1.5 block text-sm font-medium text-foreground;
+  }
+
+  .card-base {
+    @apply rounded-lg border border-border bg-card p-4 shadow-sm;
+  }
+  .card-elevated {
+    @apply overflow-hidden rounded-lg border border-border bg-card shadow-2xl shadow-black/5;
+  }
+  .badge-base {
+    @apply inline-flex items-center rounded-full bg-muted px-2.5 py-0.5 text-xs font-medium text-muted-foreground;
+  }
+
+  .alert-error {
+    @apply rounded-lg border border-danger-border bg-danger-bg px-4 py-2 text-sm text-danger-text;
+  }
+  .alert-success {
+    @apply rounded-lg border border-success-border bg-success-bg px-4 py-2 text-sm text-success;
+  }
+
+  .dropdown-menu {
+    @apply min-w-[140px] rounded-lg border border-border bg-card/95 py-1 shadow-lg backdrop-blur-sm;
+  }
+  .dropdown-item {
+    @apply block w-full px-4 py-2 text-left text-sm transition-colors hover:bg-muted;
+  }
+  .dropdown-item-danger {
+    @apply block w-full px-4 py-2 text-left text-sm text-danger-text transition-colors hover:bg-danger-bg;
+  }
+}
+
+@layer utilities {
+  .tt-slow-mo,
+  .tt-slow-mo *,
+  .tt-slow-mo *::before,
+  .tt-slow-mo *::after {
+    animation-duration: 1200ms !important;
+    transition-duration: 800ms !important;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #e2e8f0;
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #cbd5e1;
+  }
+
+  .fade-bottom {
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  }
+}
+
+/* View Transitions API — crossfade theme swap. */
+@media not (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 320ms;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:not([data-reduced-motion='off']) *,
+  html:not([data-reduced-motion='off']) *::before,
+  html:not([data-reduced-motion='off']) *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html[data-reduced-motion='on'] *,
+html[data-reduced-motion='on'] *::before,
+html[data-reduced-motion='on'] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+@keyframes tt-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: tt-marquee 45s linear infinite;
+  }
+}
+
+@source '../**/*.{ts,tsx}';
+@source '../../index.html';

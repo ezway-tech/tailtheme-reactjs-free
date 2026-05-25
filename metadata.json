@@ -1,0 +1,20 @@
+{
+  "name": "TailTheme Free",
+  "description": "MIT React admin starter — dashboards, sample pages, styling tokens, core components, and example layouts.",
+  "version": "0.3.1",
+  "tier": "free",
+  "license": "MIT",
+  "stack": ["React 19", "TypeScript", "Vite 6", "Tailwind CSS 4", "Radix UI", "React Router 7"],
+  "features": [
+    "3 dashboards (overview, SaaS, project)",
+    "SaaS + Project sample pages",
+    "30+ UI primitives",
+    "Styling tokens (colors, presets)",
+    "Core component showcase",
+    "Example components (feedback, layout)",
+    "Auth (login, register, forgot)",
+    "Settings (profile, account, appearance)",
+    "Purchase plan CTA to Pro"
+  ],
+  "upgradeUrl": "https://tailtheme.dev/pro"
+}

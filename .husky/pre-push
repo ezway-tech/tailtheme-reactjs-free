@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+echo ""
+echo "[husky pre-push] Running ESLint..."
+echo ""
+
+npm run lint
