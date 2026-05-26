@@ -7,9 +7,6 @@ import {
   type PageTransitionPresetId,
 } from '@/lib/motion/page-transition-presets';
 import type { AppRouteHandle } from '@/routes/app-route-handle';
-import { cn } from '@/lib/cn';
-
-const outletFrameClassName = 'flex min-h-0 flex-1 flex-col';
 
 /**
  * Walks `useMatches()` from leaf to root and returns the first `handle.pageTransition` defined on
@@ -52,7 +49,7 @@ export function PageOutletTransition({ className }: PageOutletTransitionProps) {
 
   if (presetId === 'none') {
     return (
-      <div className={cn(outletFrameClassName, className)}>
+      <div className={className}>
         <Outlet />
       </div>
     );
@@ -64,7 +61,7 @@ export function PageOutletTransition({ className }: PageOutletTransitionProps) {
     <AnimatePresence mode={def.presenceMode} initial={false}>
       <motion.div
         key={pathname}
-        className={cn(outletFrameClassName, className)}
+        className={className}
         initial={def.initial}
         animate={def.animate}
         exit={def.exit}

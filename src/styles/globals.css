@@ -395,29 +395,26 @@
 
   /*
     Reserve scrollbar width on document-scroll pages so Radix scroll lock
-    does not shift layout. App shell (`data-app-shell`) scrolls internally —
-    do not reserve a document gutter or a blank strip appears beside the header.
+    does not shift layout. App routes scroll inside the shell — do not
+    reserve a document gutter or a dark strip appears beside the header.
     `data-app-route` is set in index.html for /app paths before React mounts.
   */
   @supports (scrollbar-gutter: stable) {
-    html:where(:not(:has([data-app-shell]))):not([data-app-route]) {
+    html:where(:not([data-app-route])) {
       scrollbar-gutter: stable;
     }
 
-    html:has([data-app-shell]),
     html[data-app-route] {
       scrollbar-gutter: auto;
       overflow: hidden;
       height: 100%;
     }
 
-    html:has([data-app-shell]) body,
     html[data-app-route] body {
       overflow: hidden;
       height: 100%;
     }
 
-    html:has([data-app-shell]) #root,
     html[data-app-route] #root {
       height: 100%;
       min-height: 100%;
@@ -438,26 +435,8 @@
   }
 
   @supports not (scrollbar-gutter: stable) {
-    html:where(:not(:has([data-app-shell]))):not([data-app-route]) {
+    html:where(:not([data-app-route])) {
       overflow-y: scroll;
-    }
-
-    html:has([data-app-shell]),
-    html[data-app-route] {
-      overflow: hidden;
-      height: 100%;
-    }
-
-    html:has([data-app-shell]) body,
-    html[data-app-route] body {
-      overflow: hidden;
-      height: 100%;
-    }
-
-    html:has([data-app-shell]) #root,
-    html[data-app-route] #root {
-      height: 100%;
-      min-height: 100%;
     }
   }
 

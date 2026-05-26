@@ -120,7 +120,7 @@ export const Sidebar = React.forwardRef<HTMLElement, SidebarProps>(
         ref={ref}
         data-state={state}
         className={cn(
-          'sticky top-0 hidden h-screen shrink-0 flex-col border-r border-input bg-card text-sidebar-foreground transition-[width] duration-200 md:flex',
+          'hidden h-full min-h-0 shrink-0 flex-col border-r border-input bg-card text-sidebar-foreground transition-[width] duration-200 md:flex',
           side === 'right' && 'order-last border-l border-r-0',
           className,
         )}

@@ -520,14 +520,11 @@ export default function AppShell() {
 
   if (layout === 'top-nav') {
     return (
-      <div
-        data-app-shell
-        className="flex h-svh min-h-0 flex-col overflow-hidden bg-background text-foreground"
-      >
+      <div className="flex h-svh min-h-0 flex-col overflow-hidden bg-background text-foreground">
         <TopNavHeader />
         <main
           id="main-content"
-          className="flex min-h-0 flex-1 flex-col overflow-y-auto overflow-x-hidden p-4 md:p-6"
+          className="min-h-0 flex-1 overflow-y-auto overflow-x-hidden p-4 md:p-6"
         >
           <PageOutletTransition />
         </main>
@@ -537,7 +534,7 @@ export default function AppShell() {
 
   return (
     <AppHeaderProvider>
-      <SidebarProvider data-app-shell desktopStateOverride={desktopStateOverride}>
+      <SidebarProvider desktopStateOverride={desktopStateOverride}>
         <Sidebar>
           <SidebarHeader className={isCompactLayout ? 'h-14 min-h-14' : undefined}>
             <Brand />
@@ -557,10 +554,7 @@ export default function AppShell() {
           <div className="flex min-h-0 flex-1 flex-col overflow-y-auto overflow-x-hidden">
             <main
               id="main-content"
-              className={cn(
-                'flex min-h-0 flex-1 flex-col p-4 md:p-6',
-                isCompactLayout && 'p-3 md:p-4',
-              )}
+              className={cn('flex-1 p-4 md:p-6', isCompactLayout && 'p-3 md:p-4')}
             >
               <PageOutletTransition />
             </main>

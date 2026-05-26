@@ -3,14 +3,16 @@ import { useTranslation } from 'react-i18next';
 import { APP_TITLE } from '@/config';
 
 /**
- * Route-level Suspense fallback inside {@link AppShell}. Fills the main column
- * (`flex-1 min-h-0`) — do not use `min-h-screen` here or the splash overflows the
- * shell scrollport and can flash a horizontal seam on refresh.
+ * Full-screen splash / bootstrap screen. Swap out the static copy for your
+ * own loading state when integrating with data fetching.
  */
 export default function LoadingSplashPage() {
   const { t } = useTranslation();
   return (
-    <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-4 bg-background p-6 text-center">
+    <div
+      data-route-loading
+      className="flex min-h-screen flex-col items-center justify-center gap-4 bg-gradient-to-br from-primary/10 via-background to-accent/5 p-6 text-center"
+    >
       <div className="flex h-14 w-14 animate-pulse items-center justify-center rounded-2xl bg-background shadow-lg ring-1 ring-border">
         <img src="/tailtheme.png" alt={`${APP_TITLE} logo`} className="h-10 w-10 object-contain" />
       </div>
