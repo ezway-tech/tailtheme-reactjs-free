@@ -83,7 +83,7 @@ TailTheme Free is a ready-to-customize starting point for React admin apps. The 
 
 - TailTheme Free MIT release aligned with TailTheme Pro shell (sidebar layout, scroll regions, loading splash).
 - App routes for dashboards, SaaS/Project samples, UI showcase, and auth.
-- Developer tooling: ESLint (flat config + file naming rules), Prettier, Husky + lint-staged, Vitest, Playwright smoke/a11y specs.
+- Developer tooling: ESLint (flat config + file naming rules), Prettier, Husky pre-commit (`lint-staged` on staged files), Vitest, Playwright smoke/a11y specs.
 - [GUIDE.md](./GUIDE.md) for source overview, install, and day-to-day commands.
 
 For Pro release history, see the [TailTheme changelog](https://tailtheme.dev/changelog).

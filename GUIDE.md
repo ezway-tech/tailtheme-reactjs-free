@@ -24,10 +24,11 @@ npm run dev
 
 > **Windows:** clone near the drive root (e.g. `C:\dev\tailtheme-reactjs-free`) if you hit long-path or permission issues.
 
-`npm install` runs `prepare` and installs **Husky** hooks:
+`npm install` enables **Husky** with a **pre-commit** hook only (no pre-push lint):
 
-- **pre-commit** — Prettier + ESLint on staged files (`lint-staged`)
-- **pre-push** — full-project ESLint
+- **pre-commit** — Prettier + ESLint on **staged** files via `lint-staged`; on failure the hook prints a short summary plus file:line errors from ESLint/Prettier above.
+
+Before **push**, run `npm run check` locally or rely on CI — Free does not lint the whole repo on `git push`.
 
 ### Local URLs (default port 5173)
 
@@ -169,8 +170,6 @@ npm run format        # fix all tracked patterns
 npm run format:check  # fail if anything needs formatting
 ```
 
-On commit, **lint-staged** runs Prettier then ESLint on staged `.ts`/`.tsx` files.
-
 **ESLint** (flat config) enforces React, hooks, TypeScript, and **kebab-case file names** (`eslint-plugin-check-file`). Fix auto-fixable issues:
 
 ```bash
@@ -222,7 +221,8 @@ npm run preview
 | Issue                                      | What to try                                                                                                             |
 | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
 | Layout flash or horizontal seam on refresh | Pull latest; app routes use internal scroll — loaders should use `flex-1 min-h-0`, not `min-h-screen` inside the shell. |
-| Husky hooks not running                    | Re-run `npm install`; confirm `.husky/pre-commit` exists.                                                               |
+| Husky pre-commit not running               | Re-run `npm install`; confirm `.husky/pre-commit` exists and uses LF line endings.                                      |
+| Commit blocked, many `Delete ␍` errors     | `git config core.autocrlf false` then `npm run lint -- --fix` and commit again.                                         |
 | Playwright browser missing                 | `npx playwright install chromium`                                                                                       |
 | `npm run check` fails on CRLF              | `npm run format` once on Windows.                                                                                       |
 | Port 5173 in use                           | Stop the other process or change `server.port` in `vite.config.ts`.                                                     |

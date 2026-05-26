@@ -1,19 +1,27 @@
 #!/usr/bin/env sh
 
-# Run Prettier then ESLint --fix on staged files via lint-staged (see package.json).
+# Prettier + ESLint on staged files only (see lint-staged in package.json).
 
 echo ""
-echo "[husky pre-commit] Running Prettier (write) then ESLint (--fix) on staged files…"
+echo "[husky pre-commit] Prettier + ESLint on staged files…"
 echo ""
 
 if ! npx lint-staged; then
   echo ""
-  echo "[husky pre-commit] Commit aborted."
-  echo "  • ESLint still reports issues after --fix — fix them manually (see output above)."
-  echo "  • Or Prettier / ESLint exited with another error."
+  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  echo "  COMMIT BLOCKED (pre-commit)"
+  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  echo "  Details: see file:line errors above."
   echo ""
-  echo "  Try: npm run format && npm run lint:fix"
-  echo "  Then: git add -u && git commit …"
+  echo "  Try:"
+  echo "    npm run format"
+  echo "    npm run lint:fix"
+  echo "    git add -u && git commit"
+  echo ""
+  echo "  WSL/Windows CRLF (Delete ␍)?"
+  echo "    git config core.autocrlf false"
+  echo "    npm run lint -- --fix"
+  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
   echo ""
   exit 1
 fi
