@@ -71,14 +71,3 @@ export function AuthSocialProviders({
     </div>
   );
 }
-
-export type {
-  AuthOAuthProviderId,
-  AuthOAuthProviderPreset,
-} from '@/components/auth/auth-provider-icons';
-export {
-  AUTH_OAUTH_PROVIDER_CATALOG,
-  AUTH_OAUTH_PROVIDER_IDS,
-  AUTH_OAUTH_PROVIDER_PRESETS,
-  resolveAuthOAuthProviders,
-} from '@/components/auth/auth-provider-icons';

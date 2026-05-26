@@ -1,99 +1,58 @@
-# TailTheme Free — Free React Admin Dashboard Template
+# TailTheme React — Free (MIT)
 
-TailTheme Free is a high-quality, open-source, and **free React admin dashboard template** built for modern product teams. Use it to ship data-rich backends, SaaS consoles, and internal tools with accessible UI, design tokens, and a production-ready app shell.
+Open-source admin starter: **React 19**, **TypeScript**, **Vite 6**, **Tailwind CSS v4**.
 
-![TailTheme Free dashboard preview](./banner.png)
+![TailTheme Free — dashboard preview](./banner.png)
 
-## Overview
+|                               |                                                                |
+| ----------------------------- | -------------------------------------------------------------- |
+| **Live demo**                 | [tailtheme-demo.ezway.tech](https://tailtheme-demo.ezway.tech) |
+| **TailTheme (full template)** | [tailtheme.ezway.tech](https://tailtheme.ezway.tech)           |
 
-TailTheme Free gives you the essential UI components, layouts, and sample pages needed to build feature-rich admin experiences. It is a subset of the commercial **TailTheme Pro** template, released under the MIT license.
+## Quick start
 
-Built with:
+```bash
+npm install
+npm run dev
+```
 
-- **React 19**
-- **TypeScript**
-- **Vite 6**
-- **Tailwind CSS v4**
-- **Radix UI** + **shadcn-style** primitives
-- **React Router 7**
-
-### Quick links
-
-- [✨ Visit website](https://tailtheme.dev)
-- [📄 Developer guide](./GUIDE.md) — source layout, scripts, format, lint, and tests
-- [⬇️ Get TailTheme Pro](https://tailtheme.dev/pro)
-- [📋 Changelog](https://tailtheme.dev/changelog)
-
-### Demos
-
-After you start the dev server (see [GUIDE.md](./GUIDE.md)):
-
-| Route                                                                      | Description        |
-| -------------------------------------------------------------------------- | ------------------ |
-| [http://localhost:5173/landing](http://localhost:5173/landing)             | Marketing landing  |
-| [http://localhost:5173/app/dashboard](http://localhost:5173/app/dashboard) | Overview dashboard |
-| [http://localhost:5173/auth/login](http://localhost:5173/auth/login)       | Auth — sign in     |
-
-### Related product
-
-- [**TailTheme Pro**](https://tailtheme.dev/pro) — full template (9 dashboards, 11 verticals, CRM, i18n, MSW demo mode, Figma kit, commercial license)
+Open [http://localhost:5173](http://localhost:5173) — try `/landing`, then **Open app** → `/app/dashboard`.
 
 ## What's included
 
-TailTheme Free is a ready-to-customize starting point for React admin apps. The template includes:
-
-- **App shell** — collapsible sidebar, top header, breadcrumbs, command palette (⌘K)
 - **3 dashboards** — Overview, SaaS, Project
 - **Sample verticals** — SaaS (analytics, members, calendar) and Project (kanban, projects, tasks)
-- **30+ UI primitives** — buttons, forms, tables, dialogs, tabs, toasts, and more
-- **Design tokens** — semantic colors, typography, spacing, radius, shadows (light/dark)
-- **Auth screens** — login, register, forgot password
-- **Settings** — profile, account, appearance
-- **Marketing pages** — landing, pricing, about, contact
-- **Quality tooling** — ESLint, Prettier, Husky, Vitest, Playwright (aligned with Pro workflow)
+- **30+ UI primitives** — Radix + CVA patterns; showcase at `/app/ui`
+- **Auth & settings** — Login, register, profile, account, appearance (light/dark)
+- **Marketing pages** — Landing, pricing, about, contact
+- **4 theme presets** — English only (Pro adds i18n and 16 presets)
 
-## Feature comparison
+Static demo data only — no backend, no MSW.
 
-### TailTheme Free (this repo)
+## TailTheme Pro
 
-- MIT license
-- 3 dashboards
-- 2 verticals (SaaS, Project)
-- 30+ UI primitives
-- 4 theme presets
-- English locale
-- ESLint, Prettier, Husky, unit + E2E test scaffolding
-- Community / self-serve support
+Free is a subset for learning and small projects. **Pro** adds 9 dashboards, 11 verticals (including CRM), mini-apps, MSW demo mode, EN/VI/FR, and a commercial license.
 
-### TailTheme Pro
+**[View Pro on tailtheme.ezway.tech →](https://tailtheme.ezway.tech)**
 
-- Commercial license
-- 9 dashboards across 11 verticals + CRM
-- 40+ UI primitives and patterns
-- 16 theme presets
-- i18n (EN, VI, FR)
-- MSW demo mode, mini-apps, Figma design file
-- Priority updates and support
+|               | Free (this repo) | Pro        |
+| ------------- | ---------------- | ---------- |
+| License       | MIT              | Commercial |
+| Dashboards    | 3                | 9          |
+| Verticals     | 2                | 11 + CRM   |
+| Theme presets | 4                | 16         |
+| Locales       | EN               | EN, VI, FR |
 
-[Compare plans and pricing →](https://tailtheme.dev/pro)
+## Scripts
 
-## Update logs
+| Command         | Description                |
+| --------------- | -------------------------- |
+| `npm run dev`   | Dev server                 |
+| `npm run build` | Production build → `dist/` |
+| `npm run check` | Typecheck + lint + format  |
 
-### Version 0.3.1
-
-- TailTheme Free MIT release aligned with TailTheme Pro shell (sidebar layout, scroll regions, loading splash).
-- App routes for dashboards, SaaS/Project samples, UI showcase, and auth.
-- Developer tooling: ESLint (flat config + file naming rules), Prettier, Husky pre-commit (`lint-staged` on staged files), Vitest, Playwright smoke/a11y specs.
-- [GUIDE.md](./GUIDE.md) for source overview, install, and day-to-day commands.
-
-For Pro release history, see the [TailTheme changelog](https://tailtheme.dev/changelog).
+More detail (structure, customization, tests): **[GUIDE.md](./GUIDE.md)**.
 
 ## License
 
-TailTheme Free is released under the [MIT License](./LICENSE).
-
-## Support
-
-If this template helps your project, consider starring the repository and upgrading to [TailTheme Pro](https://tailtheme.dev/pro) when you need the full kit.
-
-For development, start with **[GUIDE.md](./GUIDE.md)**.
+MIT — see [LICENSE](./LICENSE).

@@ -10,10 +10,15 @@ export const APP_TITLE = 'TailTheme Free';
 /** Lite build — no header language switcher or notifications popover. */
 export const TEMPLATE_TIER = 'free' as const;
 
-export const TEMPLATE_PURCHASE_URL = 'https://tailtheme.dev/pro';
+/** Product site — purchase, docs, changelog. */
+export const TAILTHEME_WEB_URL = 'https://tailtheme.ezway.tech';
 
-/** Live Pro demo — sidebar “Pro” items open this origin (same route paths as the full template). */
-export const PRO_DEMO_URL = 'https://tailtheme.dev/pro';
+/** Hosted full-template demo (sidebar “Pro” items open this origin with the same route paths). */
+export const TAILTHEME_DEMO_URL = 'https://tailtheme-demo.ezway.tech';
+
+export const TEMPLATE_PURCHASE_URL = TAILTHEME_WEB_URL;
+
+export const PRO_DEMO_URL = TAILTHEME_DEMO_URL;
 
 export const PREFERENCES_STORAGE_KEY = 'tailtheme-prefs';
 export const COLOR_MODE_STORAGE_KEY = 'tailtheme-theme';

@@ -3,7 +3,7 @@ import { ArrowRight, Layers, Palette, Sparkles } from 'lucide-react';
 import { Badge, Button } from '@/components/ui';
 import { AppLogo, SkipLink } from '@/components/patterns';
 import { urls } from '@/routes/urls';
-import { TEMPLATE_PURCHASE_URL } from '@/config';
+import { TAILTHEME_DEMO_URL, TAILTHEME_WEB_URL, TEMPLATE_PURCHASE_URL } from '@/config';
 
 const FEATURES = [
   {
@@ -66,7 +66,17 @@ export default function LandingPage() {
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Button asChild size="lg" variant="secondary">
-                <Link to={urls.app.dashboard}>Explore demo</Link>
+                <Link to={urls.app.dashboard}>Open app</Link>
+              </Button>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10"
+              >
+                <a href={TAILTHEME_DEMO_URL} target="_blank" rel="noreferrer">
+                  Live demo
+                </a>
               </Button>
               <Button
                 asChild
@@ -110,7 +120,7 @@ export default function LandingPage() {
             </p>
             <Button asChild>
               <a href={TEMPLATE_PURCHASE_URL} target="_blank" rel="noreferrer">
-                Upgrade at tailtheme.dev/pro
+                View TailTheme Pro
               </a>
             </Button>
           </div>
@@ -119,8 +129,8 @@ export default function LandingPage() {
 
       <footer className="border-t border-input px-4 py-8 text-center text-xs text-muted-foreground">
         TailTheme Free · MIT ·{' '}
-        <a href="https://tailtheme.dev/changelog" className="underline hover:text-foreground">
-          Changelog
+        <a href={TAILTHEME_WEB_URL} className="underline hover:text-foreground">
+          tailtheme.ezway.tech
         </a>
       </footer>
     </div>

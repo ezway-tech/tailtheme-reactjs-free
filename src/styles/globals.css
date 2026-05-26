@@ -310,43 +310,6 @@
   }
 }
 
-.toast-progress-track {
-  height: 6px;
-  width: 100%;
-  flex-shrink: 0;
-  overflow: hidden;
-  background: color-mix(in srgb, var(--color-border) 55%, transparent);
-}
-
-.toast-progress-fill {
-  display: block;
-  height: 100%;
-  width: 100%;
-  transform-origin: left center;
-  animation-name: toast-progress;
-  animation-duration: var(--toast-duration, 3000ms);
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-}
-
-.group:hover .toast-progress-fill {
-  animation-play-state: paused;
-}
-
-/* Custom ProgressToast supplies its own card; keep the sonner shell neutral */
-[data-sonner-toaster] {
-  max-width: min(100vw - 2rem, 26rem);
-}
-
-[data-sonner-toaster] [data-sonner-toast] {
-  width: 100% !important;
-  max-width: 100%;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-
 @keyframes tt-collapsible-down {
   from {
     height: 0;
@@ -683,26 +646,21 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html:not([data-reduced-motion='off']) *:not(.toast-progress-fill),
-  html:not([data-reduced-motion='off']) *:not(.toast-progress-fill)::before,
-  html:not([data-reduced-motion='off']) *:not(.toast-progress-fill)::after {
+  html:not([data-reduced-motion='off']) *,
+  html:not([data-reduced-motion='off']) *::before,
+  html:not([data-reduced-motion='off']) *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
-html[data-reduced-motion='on'] *:not(.toast-progress-fill),
-html[data-reduced-motion='on'] *:not(.toast-progress-fill)::before,
-html[data-reduced-motion='on'] *:not(.toast-progress-fill)::after {
+html[data-reduced-motion='on'] *,
+html[data-reduced-motion='on'] *::before,
+html[data-reduced-motion='on'] *::after {
   animation-duration: 0.01ms !important;
   animation-iteration-count: 1 !important;
   transition-duration: 0.01ms !important;
-}
-
-/* Functional dismiss timer — keep full duration even when global motion is reduced */
-.toast-progress-fill {
-  animation-duration: var(--toast-duration, 3000ms) !important;
 }
 
 @keyframes tt-marquee {
