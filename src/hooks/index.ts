@@ -20,3 +20,4 @@ export type {
 export { useReducedMotion, useMotionPrefs } from './useReducedMotion';
 export { useDateRangePresets } from './use-date-range-presets';
 export type { DateRangePreset, DateRangePresetId } from './use-date-range-presets';
+export { useSyncHtmlAppRoute } from './use-sync-html-app-route';

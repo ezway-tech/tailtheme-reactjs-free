@@ -15,7 +15,7 @@ export interface ToastOptions extends Omit<ExternalToast, 'description' | 'actio
   cancel?: ToastAction;
 }
 
-const DEFAULT_DURATION = 4000;
+const DEFAULT_DURATION = 3000;
 
 function fireProgressToast(tone: ToastTone, message: React.ReactNode, options?: ToastOptions) {
   const duration = options?.duration ?? DEFAULT_DURATION;

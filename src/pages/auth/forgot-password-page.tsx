@@ -20,6 +20,7 @@ import {
   FormMessage,
   Input,
 } from '@/components/ui';
+import { AuthFormBrand } from '@/components/auth/auth-form-brand';
 import { urls } from '@/routes/urls';
 
 const schema = z.object({ email: z.string().email() });
@@ -34,6 +35,7 @@ export default function ForgotPasswordPage() {
   return (
     <Card>
       <CardHeader className="space-y-1 text-center">
+        <AuthFormBrand className="pb-2" />
         <CardTitle className="text-2xl">{t('pages.forgot.title', 'Reset your password')}</CardTitle>
         <CardDescription>
           {t('pages.forgot.subtitle', "Enter your email and we'll send you a reset link.")}

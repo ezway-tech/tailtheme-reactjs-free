@@ -75,6 +75,7 @@ export default tseslint.config(
   {
     files: [
       'src/components/ui/**/*.{ts,tsx}',
+      'src/components/auth/**/*.{ts,tsx}',
       'src/components/patterns/**/*.{ts,tsx}',
       'src/test/**/*.{ts,tsx}',
       'src/routes/**/*.{ts,tsx}',
@@ -94,6 +95,7 @@ export default tseslint.config(
       'src/pages/ui/tokens/colors-page.tsx',
     ],
     rules: {
+      // Legacy motion/nav patterns copied from Pro; safe for Lite consumers.
       'react-hooks/set-state-in-effect': 'off',
     },
   },

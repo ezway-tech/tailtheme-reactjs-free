@@ -1,5 +1,9 @@
+import type { CSSProperties } from 'react';
 import { Toaster as SonnerToaster } from 'sonner';
 import { useTheme } from '@/hooks/useTheme';
+
+/** Matches ProgressToast card width; sonner defaults to 356px and causes right-edge overflow. */
+const TOASTER_WIDTH = 'min(100vw - 2rem, 26rem)';
 
 /**
  * Sonner `<Toaster />` wrapped so that `theme` follows our resolved theme.
@@ -11,5 +15,16 @@ import { useTheme } from '@/hooks/useTheme';
  */
 export function ToastProvider() {
   const { resolvedTheme } = useTheme();
-  return <SonnerToaster position="top-right" theme={resolvedTheme} className="font-sans" />;
+  return (
+    <SonnerToaster
+      position="top-right"
+      theme={resolvedTheme}
+      className="font-sans"
+      gap={12}
+      offset={16}
+      mobileOffset={12}
+      toastOptions={{ unstyled: true }}
+      style={{ '--width': TOASTER_WIDTH } as CSSProperties}
+    />
+  );
 }

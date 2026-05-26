@@ -28,11 +28,11 @@ Built with:
 
 After you start the dev server (see [GUIDE.md](./GUIDE.md)):
 
-| Route | Description |
-| ----- | ----------- |
-| [http://localhost:5173/landing](http://localhost:5173/landing) | Marketing landing |
+| Route                                                                      | Description        |
+| -------------------------------------------------------------------------- | ------------------ |
+| [http://localhost:5173/landing](http://localhost:5173/landing)             | Marketing landing  |
 | [http://localhost:5173/app/dashboard](http://localhost:5173/app/dashboard) | Overview dashboard |
-| [http://localhost:5173/auth/login](http://localhost:5173/auth/login) | Auth — sign in |
+| [http://localhost:5173/auth/login](http://localhost:5173/auth/login)       | Auth — sign in     |
 
 ### Related product
 

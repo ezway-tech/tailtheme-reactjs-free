@@ -32,7 +32,9 @@
       "prettier --write",
       "eslint --fix --max-warnings 0 --report-unused-disable-directives"
     ],
-    "*.{json,css,md,html}": ["prettier --write"]
+    "*.{json,css,md,html}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

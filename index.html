@@ -11,16 +11,43 @@
     <link rel="apple-touch-icon" href="/tailtheme.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <title>TailTheme Free</title>
+    <link rel="stylesheet" href="/src/styles/globals.css" />
     <style>
+      html {
+        color-scheme: light;
+      }
+      html.dark {
+        color-scheme: dark;
+      }
       html,
-      body {
+      body,
+      #root {
         margin: 0;
         padding: 0;
+        outline: none;
+        border: 0;
+        box-shadow: none;
         background-color: #f9fafb;
       }
       html.dark,
-      html.dark body {
+      html.dark body,
+      html.dark #root {
         background-color: #0f1419;
+      }
+      html:focus,
+      html:focus-visible,
+      body:focus,
+      body:focus-visible,
+      #root:focus,
+      #root:focus-visible {
+        outline: none !important;
+      }
+      html[data-app-route],
+      html[data-app-route] body,
+      html[data-app-route] #root {
+        height: 100%;
+        min-height: 100svh;
+        overflow: hidden;
       }
     </style>
     <script>
@@ -30,39 +57,37 @@
         var dark =
           theme === 'dark' ||
           (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
-        var root = document.documentElement;
+        var docEl = document.documentElement;
+        var surface = dark ? '#0f1419' : '#f9fafb';
         if (dark) {
-          root.classList.add('dark');
-          root.setAttribute('data-theme', 'dark');
+          docEl.classList.add('dark');
+          docEl.setAttribute('data-theme', 'dark');
         } else {
-          root.classList.remove('dark');
-          root.setAttribute('data-theme', 'light');
+          docEl.classList.remove('dark');
+          docEl.setAttribute('data-theme', 'light');
+        }
+        docEl.style.backgroundColor = surface;
+        document.body.style.backgroundColor = surface;
+        var appRoot = document.getElementById('root');
+        if (appRoot) {
+          appRoot.style.backgroundColor = surface;
         }
         if (/^\/app(\/|$)/.test(location.pathname)) {
-          root.setAttribute('data-app-route', '');
-          root.style.overflow = 'hidden';
-          root.style.height = '100%';
+          docEl.setAttribute('data-app-route', '');
+          docEl.style.overflow = 'hidden';
+          docEl.style.height = '100%';
+          document.body.style.overflow = 'hidden';
+          document.body.style.height = '100%';
+          if (appRoot) {
+            appRoot.style.height = '100%';
+            appRoot.style.minHeight = '100%';
+          }
         }
       })();
     </script>
   </head>
   <body>
     <div id="root"></div>
-    <script>
-      (function () {
-        if (!/^\/app(\/|$)/.test(location.pathname)) return;
-        var el = document.documentElement;
-        var surface = el.classList.contains('dark') ? '#0f1419' : '#f9fafb';
-        document.body.style.overflow = 'hidden';
-        document.body.style.height = '100%';
-        document.body.style.backgroundColor = surface;
-        var appRoot = document.getElementById('root');
-        if (appRoot) {
-          appRoot.style.height = '100%';
-          appRoot.style.minHeight = '100%';
-        }
-      })();
-    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

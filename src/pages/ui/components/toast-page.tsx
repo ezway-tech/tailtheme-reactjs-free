@@ -36,7 +36,7 @@ export default function ToastPage() {
           {
             name: 'duration',
             type: 'number',
-            default: '4000',
+            default: '3000',
             description:
               'Auto-dismiss timeout (ms). Pass Infinity to keep open until acknowledged.',
           },

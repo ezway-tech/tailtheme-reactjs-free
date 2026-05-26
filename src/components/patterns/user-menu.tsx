@@ -1,3 +1,4 @@
+import { useCallback, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { LogOut, Settings, User as UserIcon } from 'lucide-react';
@@ -12,8 +13,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-  toast,
 } from '@/components/ui';
+import { clearAuthSession, readAuthSessionUser } from '@/lib/auth-session';
 import { urls } from '@/routes/urls';
 
 export interface UserMenuUser {
@@ -28,21 +29,45 @@ const DEFAULT_USER: UserMenuUser = {
   avatarUrl: undefined,
 };
 
+/** Matches Radix dropdown `animate-out` duration in `dropdown-menu.tsx`. */
+const MENU_CLOSE_MS = 150;
+
+function resolveMenuUser(userProp?: UserMenuUser): UserMenuUser {
+  if (userProp) return userProp;
+  return readAuthSessionUser() ?? DEFAULT_USER;
+}
+
 /**
  * Header avatar dropdown with quick links to profile/settings and a mock
  * logout action. Pass `user` prop to override the fixtures.
  */
-export function UserMenu({ user = DEFAULT_USER }: { user?: UserMenuUser }) {
+export function UserMenu({ user: userProp }: { user?: UserMenuUser }) {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const [open, setOpen] = useState(false);
+  const logoutPendingRef = useRef(false);
+  const [user] = useState(() => resolveMenuUser(userProp));
+
   const initials = user.name
     .split(' ')
     .map((part) => part[0])
     .join('')
     .slice(0, 2)
     .toUpperCase();
+
+  const handleLogout = useCallback(() => {
+    if (logoutPendingRef.current) return;
+    logoutPendingRef.current = true;
+    setOpen(false);
+
+    window.setTimeout(() => {
+      clearAuthSession();
+      navigate(urls.auth.login);
+    }, MENU_CLOSE_MS);
+  }, [navigate]);
+
   return (
-    <DropdownMenu>
+    <DropdownMenu open={open} onOpenChange={setOpen}>
       <DropdownMenuTrigger asChild>
         <Button
           variant="ghost"
@@ -75,7 +100,10 @@ export function UserMenu({ user = DEFAULT_USER }: { user?: UserMenuUser }) {
         <DropdownMenuSeparator />
         <DropdownMenuItem
           className="py-2.5"
-          onClick={() => toast.info(t('user.loggedOut', 'Logged out (demo)'))}
+          onSelect={(event) => {
+            event.preventDefault();
+            handleLogout();
+          }}
         >
           <LogOut className="h-4 w-4" />
           {t('user.logout', 'Log out')}

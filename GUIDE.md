@@ -31,14 +31,14 @@ npm run dev
 
 ### Local URLs (default port 5173)
 
-| Route | Purpose |
-| ----- | ------- |
-| `/landing` | Marketing landing |
-| `/app/dashboard` | Main overview dashboard |
-| `/app/dashboards/saas` | SaaS dashboard |
-| `/app/dashboards/project` | Project dashboard |
-| `/app/ui` | UI tokens & component showcase |
-| `/auth/login` | Auth screens |
+| Route                     | Purpose                        |
+| ------------------------- | ------------------------------ |
+| `/landing`                | Marketing landing              |
+| `/app/dashboard`          | Main overview dashboard        |
+| `/app/dashboards/saas`    | SaaS dashboard                 |
+| `/app/dashboards/project` | Project dashboard              |
+| `/app/ui`                 | UI tokens & component showcase |
+| `/auth/login`             | Auth screens                   |
 
 Route constants live in `src/routes/urls.ts` — use them in `Link` and `navigate()` instead of hard-coded strings.
 
@@ -76,13 +76,13 @@ TailTheme Free is a **Vite + React 19** SPA. There is no backend; sample data co
 
 ### `src/components/`
 
-| Folder | Role |
-| ------ | ---- |
-| `ui/` | Primitives (Button, Card, Table, Dialog, …) — Radix + CVA + Tailwind |
-| `patterns/` | Composed blocks (PageHeader, AppLogo, data shells) |
-| `showcase/` | Docs-style demos for the UI section |
-| `motion/` | Page transitions and motion wrappers |
-| `auth/` | Auth-specific UI pieces |
+| Folder      | Role                                                                 |
+| ----------- | -------------------------------------------------------------------- |
+| `ui/`       | Primitives (Button, Card, Table, Dialog, …) — Radix + CVA + Tailwind |
+| `patterns/` | Composed blocks (PageHeader, AppLogo, data shells)                   |
+| `showcase/` | Docs-style demos for the UI section                                  |
+| `motion/`   | Page transitions and motion wrappers                                 |
+| `auth/`     | Auth-specific UI pieces                                              |
 
 Import from barrel files when available, e.g. `@/components/ui`, `@/components/patterns`.
 
@@ -138,23 +138,23 @@ Physical files and folders use **kebab-case** (`app-shell.tsx`, `use-preferences
 
 ## NPM scripts
 
-| Script | Description |
-| ------ | ----------- |
-| `npm run dev` | Vite dev server (port **5173**) |
-| `npm run build` | `tsc --noEmit` + production build → `dist/` |
-| `npm run preview` | Serve `dist/` locally |
-| `npm run typecheck` | TypeScript only |
-| `npm run lint` | ESLint (max warnings **0**) |
-| `npm run lint:fix` | ESLint with auto-fix |
-| `npm run format` | Prettier — write |
-| `npm run format:check` | Prettier — check (CI) |
-| `npm run check` | `typecheck` + `lint` + `format:check` |
-| `npm run test` | Vitest watch mode |
-| `npm run test:run` | Vitest single run |
-| `npm run test:coverage` | Vitest with coverage |
-| `npm run test:related` | Vitest only for files related to staged changes |
-| `npm run test:e2e` | Playwright headless |
-| `npm run test:e2e:ui` | Playwright UI mode |
+| Script                  | Description                                     |
+| ----------------------- | ----------------------------------------------- |
+| `npm run dev`           | Vite dev server (port **5173**)                 |
+| `npm run build`         | `tsc --noEmit` + production build → `dist/`     |
+| `npm run preview`       | Serve `dist/` locally                           |
+| `npm run typecheck`     | TypeScript only                                 |
+| `npm run lint`          | ESLint (max warnings **0**)                     |
+| `npm run lint:fix`      | ESLint with auto-fix                            |
+| `npm run format`        | Prettier — write                                |
+| `npm run format:check`  | Prettier — check (CI)                           |
+| `npm run check`         | `typecheck` + `lint` + `format:check`           |
+| `npm run test`          | Vitest watch mode                               |
+| `npm run test:run`      | Vitest single run                               |
+| `npm run test:coverage` | Vitest with coverage                            |
+| `npm run test:related`  | Vitest only for files related to staged changes |
+| `npm run test:e2e`      | Playwright headless                             |
+| `npm run test:e2e:ui`   | Playwright UI mode                              |
 
 Run **`npm run check`** before opening a pull request.
 
@@ -219,13 +219,13 @@ npm run preview
 
 ## Troubleshooting
 
-| Issue | What to try |
-| ----- | ----------- |
+| Issue                                      | What to try                                                                                                             |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
 | Layout flash or horizontal seam on refresh | Pull latest; app routes use internal scroll — loaders should use `flex-1 min-h-0`, not `min-h-screen` inside the shell. |
-| Husky hooks not running | Re-run `npm install`; confirm `.husky/pre-commit` exists. |
-| Playwright browser missing | `npx playwright install chromium` |
-| `npm run check` fails on CRLF | `npm run format` once on Windows. |
-| Port 5173 in use | Stop the other process or change `server.port` in `vite.config.ts`. |
+| Husky hooks not running                    | Re-run `npm install`; confirm `.husky/pre-commit` exists.                                                               |
+| Playwright browser missing                 | `npx playwright install chromium`                                                                                       |
+| `npm run check` fails on CRLF              | `npm run format` once on Windows.                                                                                       |
+| Port 5173 in use                           | Stop the other process or change `server.port` in `vite.config.ts`.                                                     |
 
 ---
 

@@ -1,7 +1,5 @@
 import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
   Button,
@@ -18,40 +16,30 @@ import {
   FormMessage,
   Input,
   Separator,
-  toast,
 } from '@/components/ui';
+import { AuthFormBrand } from '@/components/auth/auth-form-brand';
 import { AuthSocialProviders } from '@/components/auth/auth-social-providers';
 import { urls } from '@/routes/urls';
+import { setAuthSession } from '@/lib/auth-session';
 
-const schema = z
-  .object({
-    name: z.string().min(2),
-    email: z.string().email(),
-    password: z.string().min(8),
-    confirm: z.string().min(8),
-  })
-  .refine((v) => v.password === v.confirm, {
-    path: ['confirm'],
-    message: 'Passwords do not match',
-  });
-
-type RegisterValues = z.infer<typeof schema>;
+type RegisterValues = { name: string; email: string; password: string; confirm: string };
 
 export default function RegisterPage() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const form = useForm<RegisterValues>({
-    resolver: zodResolver(schema),
     defaultValues: { name: '', email: '', password: '', confirm: '' },
   });
 
-  const onSubmit = (values: RegisterValues) => {
-    toast.success(`Account created for ${values.email} (demo)`);
-    form.reset();
+  const goToDashboard = () => {
+    setAuthSession();
+    navigate(urls.app.dashboard);
   };
 
   return (
     <Card>
       <CardHeader className="space-y-1 text-center">
+        <AuthFormBrand className="pb-2" />
         <CardTitle className="text-2xl">{t('pages.register.title', 'Create an account')}</CardTitle>
         <CardDescription>
           {t('pages.register.subtitle', 'Join thousands of learners today.')}
@@ -61,7 +49,13 @@ export default function RegisterPage() {
         <AuthSocialProviders intent="signup" oauthFirst />
         <Separator />
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              goToDashboard();
+            }}
+            className="space-y-3"
+          >
             <FormField
               control={form.control}
               name="name"
