@@ -1,4 +1,4 @@
-import type { MotionIntensity } from './usePreferences';
+import type { MotionIntensity } from './use-preferences';
 
 export interface MotionPrefs {
   /** No app-wide reduced-motion toggle; always full motion for primitives using this hook. */

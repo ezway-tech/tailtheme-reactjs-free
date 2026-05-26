@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { AnimatePresence, motion } from 'motion/react';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 
 export interface ConfettiProps {
   /** When flipped to true, a single burst plays. Reset externally (e.g. key prop). */

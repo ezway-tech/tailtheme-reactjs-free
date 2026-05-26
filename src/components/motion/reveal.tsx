@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { motion, type Variants, type HTMLMotionProps } from 'motion/react';
 import { DURATION, EASE } from '@/lib/motion';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 
 export interface RevealProps extends Omit<HTMLMotionProps<'div'>, 'initial' | 'animate'> {
   /** Seconds before the animation starts (useful for staggered reveals). */

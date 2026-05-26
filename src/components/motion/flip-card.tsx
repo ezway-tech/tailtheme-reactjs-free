@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { cn } from '@/lib/cn';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 
 export interface FlipCardProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Front face content (visible by default). */

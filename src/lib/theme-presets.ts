@@ -1,5 +1,5 @@
 import { type PresetPalette } from '@/config';
-import type { Preferences } from '@/hooks/usePreferences';
+import type { Preferences } from '@/hooks/use-preferences';
 
 /**
  * Map an 8-channel preset onto the matching `Preferences` keys. Use this helper

@@ -5,7 +5,7 @@ import {
   PreferencesContext,
   type Preferences,
   type PreferencesContextValue,
-} from '@/hooks/usePreferences';
+} from '@/hooks/use-preferences';
 import { generateScaleFromString } from '@/lib/color-scale';
 
 /**

@@ -28,7 +28,7 @@ import {
 } from '@/components/ui';
 import { PageHeader, ThemeMenu, UpgradeCta } from '@/components/patterns';
 import { PRESET_PALETTES } from '@/config';
-import { usePreferences } from '@/hooks/usePreferences';
+import { usePreferences } from '@/hooks/use-preferences';
 import { cn } from '@/lib/cn';
 
 /** Lite settings — Profile, Account, and Appearance only. */

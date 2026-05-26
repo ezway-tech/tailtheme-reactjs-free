@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'react';
 import { Toaster as SonnerToaster } from 'sonner';
-import { useTheme } from '@/hooks/useTheme';
+import { useTheme } from '@/hooks/use-theme';
 import { toast } from '@/lib/toast';
 
 const TOASTER_WIDTH = 'min(100vw - 2rem, 26rem)';

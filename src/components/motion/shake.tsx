@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { motion, useAnimation } from 'motion/react';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 
 export interface ShakeProps extends React.HTMLAttributes<HTMLDivElement> {
   /** Increment this value (e.g. error counter) to trigger a shake. */

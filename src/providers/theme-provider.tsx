@@ -1,12 +1,12 @@
 import { useCallback, useEffect, useMemo, useState, type ReactNode } from 'react';
 import { COLOR_MODE_STORAGE_KEY, DEFAULT_COLOR_MODE } from '@/config';
-import { useMediaQuery } from '@/hooks/useMediaQuery';
+import { useMediaQuery } from '@/hooks/use-media-query';
 import {
   ThemeContext,
   type ResolvedTheme,
   type Theme,
   type ThemeContextValue,
-} from '@/hooks/useTheme';
+} from '@/hooks/use-theme';
 
 export interface ThemeProviderProps {
   children: ReactNode;

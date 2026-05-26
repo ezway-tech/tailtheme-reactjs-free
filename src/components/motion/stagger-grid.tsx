@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { motion, type Variants } from 'motion/react';
 import { DURATION, EASE, STAGGER } from '@/lib/motion';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 
 export interface StaggerGridProps extends React.HTMLAttributes<HTMLDivElement> {
   stagger?: 'tight' | 'normal' | 'loose';

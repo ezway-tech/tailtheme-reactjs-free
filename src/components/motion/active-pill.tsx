@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { motion } from 'motion/react';
 import { SPRING } from '@/lib/motion';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 import { cn } from '@/lib/cn';
 
 export interface ActivePillProps extends React.HTMLAttributes<HTMLDivElement> {

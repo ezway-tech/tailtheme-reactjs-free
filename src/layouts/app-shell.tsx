@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 import { ActivePill, PageOutletTransition } from '@/components/motion';
 import { APP_TITLE, TEMPLATE_PURCHASE_URL } from '@/config';
 import { SPRING } from '@/lib/motion';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 import { ChevronDown, Command as CommandIcon } from 'lucide-react';
 import {
   Button,
@@ -35,7 +35,7 @@ import {
 } from '@/components/ui';
 import { AppLogo, BreadcrumbsAuto, SidebarPurchaseBanner, ThemeMenu } from '@/components/patterns';
 import { AppHeaderProvider } from '@/contexts/app-header-context';
-import { usePreferences } from '@/hooks/usePreferences';
+import { usePreferences } from '@/hooks/use-preferences';
 import {
   type NavNode,
   PAGES_TREE,

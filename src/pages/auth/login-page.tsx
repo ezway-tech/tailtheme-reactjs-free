@@ -19,7 +19,7 @@ import {
   Separator,
 } from '@/components/ui';
 import { SPRING } from '@/lib/motion';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 import { urls } from '@/routes/urls';
 import { AuthFormBrand } from '@/components/auth/auth-form-brand';
 import { AuthSocialProviders } from '@/components/auth/auth-social-providers';

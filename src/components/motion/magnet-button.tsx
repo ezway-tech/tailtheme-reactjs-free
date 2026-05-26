@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { motion, useMotionValue, useSpring, type HTMLMotionProps } from 'motion/react';
 import { cn } from '@/lib/cn';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 
 export interface MagnetButtonProps extends Omit<HTMLMotionProps<'button'>, 'style' | 'children'> {
   /** Maximum displacement in pixels when the cursor is at the edge. */

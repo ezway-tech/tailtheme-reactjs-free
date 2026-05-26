@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { motion, type Variants, type HTMLMotionProps } from 'motion/react';
 import { DURATION, EASE, STAGGER } from '@/lib/motion';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 
 type StaggerLevel = 'tight' | 'normal' | 'loose';
 

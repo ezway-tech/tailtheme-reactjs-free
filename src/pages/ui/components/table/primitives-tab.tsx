@@ -14,7 +14,7 @@ import {
 import { motion } from 'motion/react';
 import { ShowcaseSection } from '@/components/showcase/showcase-section';
 import { DURATION, EASE, STAGGER } from '@/lib/motion';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 
 const ROWS = [
   {

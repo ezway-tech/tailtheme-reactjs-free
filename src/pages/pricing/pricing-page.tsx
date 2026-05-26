@@ -17,7 +17,7 @@ import {
 import { PageHeader } from '@/components/patterns';
 import { CountUp, StaggerGrid } from '@/components/motion';
 import { SPRING } from '@/lib/motion';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 import { cn } from '@/lib/cn';
 
 interface Plan {

@@ -1,14 +1,14 @@
-export { useTheme, ThemeContext } from './useTheme';
-export type { Theme, ResolvedTheme, ThemeContextValue } from './useTheme';
-export { useMediaQuery } from './useMediaQuery';
-export { useControllableState } from './useControllableState';
-export type { UseControllableStateParams } from './useControllableState';
+export { useTheme, ThemeContext } from './use-theme';
+export type { Theme, ResolvedTheme, ThemeContextValue } from './use-theme';
+export { useMediaQuery } from './use-media-query';
+export { useControllableState } from './use-controllable-state';
+export type { UseControllableStateParams } from './use-controllable-state';
 export {
   usePreferences,
   PreferencesContext,
   DEFAULT_PREFERENCES,
   PRESET_PALETTES,
-} from './usePreferences';
+} from './use-preferences';
 export type {
   Preferences,
   PreferencesContextValue,
@@ -16,8 +16,8 @@ export type {
   FontFamily,
   SidebarState,
   MotionIntensity,
-} from './usePreferences';
-export { useReducedMotion, useMotionPrefs } from './useReducedMotion';
+} from './use-preferences';
+export { useReducedMotion, useMotionPrefs } from './use-reduced-motion';
 export { useDateRangePresets } from './use-date-range-presets';
 export type { DateRangePreset, DateRangePresetId } from './use-date-range-presets';
 export { useSyncDocumentAppRoute } from './use-sync-document-app-route';

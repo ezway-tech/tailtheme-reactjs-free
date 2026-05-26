@@ -4,7 +4,7 @@ import { motion, useMotionValue, useSpring, useTransform } from 'motion/react';
 import { Button } from '@/components/ui';
 import { urls } from '@/routes/urls';
 import { SPRING } from '@/lib/motion';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 
 export default function NotFoundPage() {
   const { t } = useTranslation();

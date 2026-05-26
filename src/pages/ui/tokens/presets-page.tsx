@@ -3,8 +3,8 @@ import { Check } from 'lucide-react';
 import { PageHeader } from '@/components/patterns';
 import { Button } from '@/components/ui';
 import { ShowcaseSection } from '@/components/showcase';
-import { PRESET_PALETTES } from '@/hooks/usePreferences';
-import { usePreferences } from '@/hooks/usePreferences';
+import { PRESET_PALETTES } from '@/hooks/use-preferences';
+import { usePreferences } from '@/hooks/use-preferences';
 import { applyPresetToPreferences, isPresetActive, PRESET_CHANNEL_DOTS } from '@/lib/theme-presets';
 import { cn } from '@/lib/cn';
 

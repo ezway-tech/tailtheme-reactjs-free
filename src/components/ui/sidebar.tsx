@@ -3,8 +3,8 @@ import { Slot } from '@radix-ui/react-slot';
 import { PanelLeft } from 'lucide-react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/cn';
-import { useMediaQuery } from '@/hooks/useMediaQuery';
-import { usePreferences, type SidebarState } from '@/hooks/usePreferences';
+import { useMediaQuery } from '@/hooks/use-media-query';
+import { usePreferences, type SidebarState } from '@/hooks/use-preferences';
 import { Button } from './button';
 import { Sheet, SheetContent } from './sheet';
 

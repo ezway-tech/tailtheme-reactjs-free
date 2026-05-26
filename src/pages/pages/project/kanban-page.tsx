@@ -12,7 +12,7 @@ import {
 } from '@/components/ui';
 import { PageHeader } from '@/components/patterns';
 import { SPRING } from '@/lib/motion';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 
 type Status = 'todo' | 'in-progress' | 'review' | 'done';
 

@@ -28,7 +28,7 @@ import { PageHeader } from '@/components/patterns';
 import { Reveal, StaggerGrid } from '@/components/motion';
 import { motion } from 'motion/react';
 import { DURATION, EASE, STAGGER } from '@/lib/motion';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 import { cn } from '@/lib/cn';
 
 const KPIS = [

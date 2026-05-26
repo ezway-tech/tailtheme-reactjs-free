@@ -5,7 +5,7 @@ import { PageHeader } from '@/components/patterns';
 import { ShowcaseSection } from '@/components/showcase/showcase-section';
 import { ComponentApi } from '@/components/showcase/component-api';
 import { SPRING } from '@/lib/motion';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 
 function PulsingBadges() {
   const reduced = useReducedMotion();

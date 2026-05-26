@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { animate, useInView, useMotionValue } from 'motion/react';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 
 export interface CountUpProps extends Omit<React.HTMLAttributes<HTMLSpanElement>, 'children'> {
   value: number;

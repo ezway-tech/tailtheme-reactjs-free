@@ -2,7 +2,7 @@
  * TailTheme Free — static configuration.
  */
 
-import type { Theme } from '@/hooks/useTheme';
+import type { Theme } from '@/hooks/use-theme';
 import type { PageTransitionPresetId } from '@/lib/motion/page-transition-presets';
 
 export const APP_TITLE = 'TailTheme Free';

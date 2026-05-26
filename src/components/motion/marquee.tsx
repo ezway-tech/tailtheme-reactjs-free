@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { motion, useAnimationControls } from 'motion/react';
 import { cn } from '@/lib/cn';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 import { useSlowMoFactor } from '@/components/showcase/slow-mo-context';
 
 export interface MarqueeProps extends React.HTMLAttributes<HTMLDivElement> {

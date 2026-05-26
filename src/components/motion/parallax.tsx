@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { motion, useScroll, useTransform, type HTMLMotionProps } from 'motion/react';
-import { useReducedMotion } from '@/hooks/useReducedMotion';
+import { useReducedMotion } from '@/hooks/use-reduced-motion';
 
 export interface ParallaxProps extends Omit<HTMLMotionProps<'div'>, 'style'> {
   /** Translation distance in pixels at the edge of the scroll range. */

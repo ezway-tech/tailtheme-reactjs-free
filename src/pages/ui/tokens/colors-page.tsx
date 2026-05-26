@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import { PageHeader } from '@/components/patterns';
 import { ColorSwatch, ShowcaseSection } from '@/components/showcase';
-import { usePreferences } from '@/hooks/usePreferences';
+import { usePreferences } from '@/hooks/use-preferences';
 import { cn } from '@/lib/cn';
 import {
   contrastRatio,
