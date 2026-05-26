@@ -120,7 +120,7 @@ export default function LandingPage() {
             </p>
             <Button asChild>
               <a href={TEMPLATE_PURCHASE_URL} target="_blank" rel="noreferrer">
-                View TailTheme Pro
+                Get Pro
               </a>
             </Button>
           </div>
@@ -130,7 +130,7 @@ export default function LandingPage() {
       <footer className="border-t border-input px-4 py-8 text-center text-xs text-muted-foreground">
         TailTheme Free · MIT ·{' '}
         <a href={TAILTHEME_WEB_URL} className="underline hover:text-foreground">
-          tailtheme.ezway.tech
+          Get Pro
         </a>
       </footer>
     </div>

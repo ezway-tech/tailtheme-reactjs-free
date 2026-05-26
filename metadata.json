@@ -1,7 +1,7 @@
 {
   "name": "TailTheme Free",
   "description": "MIT React admin starter — dashboards, sample pages, styling tokens, core components, and example layouts.",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "tier": "free",
   "license": "MIT",
   "stack": ["React 19", "TypeScript", "Vite 6", "Tailwind CSS 4", "Radix UI", "React Router 7"],

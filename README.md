@@ -1,58 +1,85 @@
-# TailTheme React — Free (MIT)
+<div align="center">
 
-Open-source admin starter: **React 19**, **TypeScript**, **Vite 6**, **Tailwind CSS v4**.
+![TailTheme React — admin dashboard preview](./banner.png)
 
-![TailTheme Free — dashboard preview](./banner.png)
+# TailTheme React
 
-|                               |                                                                |
-| ----------------------------- | -------------------------------------------------------------- |
-| **Live demo**                 | [tailtheme-demo.ezway.tech](https://tailtheme-demo.ezway.tech) |
-| **TailTheme (full template)** | [tailtheme.ezway.tech](https://tailtheme.ezway.tech)           |
+**Free React admin template — ship dashboards, SaaS consoles, and internal tools faster.**
 
-## Quick start
+**Production-ready app shell, design tokens, 30+ UI primitives, and sample product pages you can rebrand in hours.**
 
-```bash
-npm install
-npm run dev
-```
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-6-646CFF?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-4-38B2AC?logo=tailwindcss&logoColor=white)
 
-Open [http://localhost:5173](http://localhost:5173) — try `/landing`, then **Open app** → `/app/dashboard`.
+[📦 What's Included](#-whats-included) •
+[📋 Changelog](./CHANGELOG.md) •
+[🌐 Live Demo](https://tailtheme-demo.ezway.tech) •
+[🚀 Get Pro](https://tailtheme.ezway.tech) •
+[📖 Developer Guide](./GUIDE.md)
 
-## What's included
+</div>
 
-- **3 dashboards** — Overview, SaaS, Project
-- **Sample verticals** — SaaS (analytics, members, calendar) and Project (kanban, projects, tasks)
-- **30+ UI primitives** — Radix + CVA patterns; showcase at `/app/ui`
-- **Auth & settings** — Login, register, profile, account, appearance (light/dark)
-- **Marketing pages** — Landing, pricing, about, contact
-- **4 theme presets** — English only (Pro adds i18n and 16 presets)
+---
 
-Static demo data only — no backend, no MSW.
+## 📦 What's Included
 
-## TailTheme Pro
+| Area                | Details                                                                 |
+| ------------------- | ----------------------------------------------------------------------- |
+| **Dashboards**      | Overview, SaaS, and Project variants                                    |
+| **Product samples** | SaaS (analytics, members, calendar) · Project (kanban, projects, tasks) |
+| **UI kit**          | 30+ primitives (Radix + CVA), patterns, motion helpers                  |
+| **App shell**       | Collapsible sidebar, top bar, breadcrumbs, ⌘K palette                   |
+| **Account**         | Auth, profile, settings, appearance (light / dark)                      |
+| **Marketing**       | Landing, pricing, about, contact                                        |
+| **Theming**         | Four color presets · semantic CSS variables                             |
 
-Free is a subset for learning and small projects. **Pro** adds 9 dashboards, 11 verticals (including CRM), mini-apps, MSW demo mode, EN/VI/FR, and a commercial license.
+---
 
-**[View Pro on tailtheme.ezway.tech →](https://tailtheme.ezway.tech)**
+## 🚀 TailTheme Pro
 
-|               | Free (this repo) | Pro        |
-| ------------- | ---------------- | ---------- |
-| License       | MIT              | Commercial |
-| Dashboards    | 3                | 9          |
-| Verticals     | 2                | 11 + CRM   |
-| Theme presets | 4                | 16         |
-| Locales       | EN               | EN, VI, FR |
+This repo is the **free edition**. The full template is at **[tailtheme.ezway.tech](https://tailtheme.ezway.tech)**.
 
-## Scripts
+<div align="center">
 
-| Command         | Description                |
-| --------------- | -------------------------- |
-| `npm run dev`   | Dev server                 |
-| `npm run build` | Production build → `dist/` |
-| `npm run check` | Typecheck + lint + format  |
+|               | **Free** |   **Pro**    |
+| :------------ | :------: | :----------: |
+| Dashboards    |    3     |      9       |
+| Verticals     |    2     |   11 + CRM   |
+| Theme presets |    4     |      16      |
+| Locales       |    EN    | EN · VI · FR |
+| MSW demo mode |    —     |      ✓       |
 
-More detail (structure, customization, tests): **[GUIDE.md](./GUIDE.md)**.
+<br/>
 
-## License
+<a href="https://tailtheme.ezway.tech"><strong>Get Pro →</strong></a>
 
-MIT — see [LICENSE](./LICENSE).
+</div>
+
+---
+
+## 📋 Changelog
+
+| Version                                 | Date       | Highlights                                                       |
+| --------------------------------------- | ---------- | ---------------------------------------------------------------- |
+| [0.3.2](./CHANGELOG.md#032--2026-05-26) | 2026-05-26 | Docs refresh, ezway.tech demo & Pro links                        |
+| [0.3.1](./CHANGELOG.md#031--2026-05-21) | 2026-05-21 | Free release — 3 dashboards, SaaS & Project samples, UI showcase |
+
+Full history → **[CHANGELOG.md](./CHANGELOG.md)**
+
+---
+
+## 📖 Setup & development
+
+Install, local routes, customization, scripts, tests, deploy, and troubleshooting → **[GUIDE.md](./GUIDE.md)**
+
+---
+
+<div align="center">
+  <sub>
+    <a href="./LICENSE">License</a>
+    ·
+    <a href="https://github.com/ezway-tech/tailtheme-reactjs-free">GitHub</a>
+  </sub>
+</div>
