@@ -39,21 +39,36 @@
 
 ## 🚀 TailTheme Pro
 
-This repo is the **free edition**. The full template is at **[tailtheme.ezway.tech](https://tailtheme.ezway.tech)**.
+This repo is the **free edition** (MIT). The full commercial template lives at **[tailtheme.ezway.tech](https://tailtheme.ezway.tech)** — same React 19 + Vite + Tailwind stack, with every dashboard, vertical pack, and advanced pattern included in source.
+
+**What Pro adds on top of Free:** seven more dashboard layouts, eight industry verticals (Edu, E-commerce, CRM, Healthcare, Finance, Social, Marketing, Vehicle), 50+ additional sample pages, advanced UI showcases (charts, data tables, marketing blocks), a runtime theme customizer, MSW-backed demo mode, in-app developer docs, and a commercial license.
 
 <div align="center">
 
-|               | **Free** |   **Pro**    |
-| :------------ | :------: | :----------: |
-| Dashboards    |    3     |      9       |
-| Verticals     |    2     |   11 + CRM   |
-| Theme presets |    4     |      16      |
-| Locales       |    EN    | EN · VI · FR |
-| MSW demo mode |    —     |      ✓       |
+|                              | **Free**                                                               | **Pro**                                                                        |
+| :--------------------------- | :--------------------------------------------------------------------- | :----------------------------------------------------------------------------- |
+| **Dashboard layouts**        | 3 — Overview, SaaS, Project                                            | 10 — all vertical dashboards incl. CRM                                         |
+| **Industry sample packs**    | SaaS + Project (~8 pages)                                              | 10 verticals, **60+** ready pages                                              |
+| **Pro-only verticals**       | Sidebar teasers → [hosted Pro demo](https://tailtheme-demo.ezway.tech) | Full source: Edu, E-commerce, CRM, Health, Finance, Social, Marketing, Vehicle |
+| **UI primitives**            | 30+ (Radix + CVA)                                                      | **40+** — charts inputs, file upload, rich text, combobox, carousel, …         |
+| **UI showcase (`/app/ui`)**  | Core components + 2 example categories                                 | + Charts, rich inputs, patterns, marketing blocks, page transitions            |
+| **Design token guides**      | Colors, theme presets                                                  | + Typography, spacing                                                          |
+| **Theme presets**            | 4 curated palettes                                                     | **16** curated palettes                                                        |
+| **Runtime theme customizer** | Preset picker                                                          | Full palette, density, motion, layout, RTL                                     |
+| **i18n**                     | EN · VI · FR (shell, actions, forms)                                   | Full UI copy in **EN · VI · FR**                                               |
+| **Auth flows**               | Login, register, forgot password                                       | + SSO picker, 2FA, session expired, onboarding                                 |
+| **Marketing site**           | Landing, pricing, about, contact                                       | + FAQ, legal, changelog blocks                                                 |
+| **Data table patterns**      | Basic table primitive demos                                            | Faceted filters, toolbar, column toggle, pagination                            |
+| **Demo / API mocking**       | Static fixtures                                                        | **MSW** mock API + demo-mode banner                                            |
+| **In-app developer docs**    | —                                                                      | `/app/docs` configuration guides                                               |
+| **License**                  | MIT (public GitHub)                                                    | Commercial — client & SaaS projects                                            |
+| **Updates**                  | Community                                                              | Lifetime Pro updates                                                           |
 
 <br/>
 
 <a href="https://tailtheme.ezway.tech"><strong>Get Pro →</strong></a>
+
+<sub>Run the app and open <strong>/app/upgrade</strong> for the same comparison inside the template.</sub>
 
 </div>
 

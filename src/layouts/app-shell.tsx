@@ -61,12 +61,38 @@ function appHeaderClassName(compact = false) {
   );
 }
 
+type MobileHeaderUtilitiesContextValue = {
+  open: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const MobileHeaderUtilitiesContext = React.createContext<MobileHeaderUtilitiesContextValue | null>(
+  null,
+);
+
+function useMobileHeaderUtilities() {
+  const ctx = React.useContext(MobileHeaderUtilitiesContext);
+  if (!ctx) {
+    throw new Error('useMobileHeaderUtilities must be used within AppHeaderChrome');
+  }
+  return ctx;
+}
+
 /** Full-width chrome row; scroll lives below so the scrollbar does not clip the header border. */
-function AppHeaderBar({ compact, children }: { compact?: boolean; children: React.ReactNode }) {
+function AppHeaderChrome({ compact, children }: { compact?: boolean; children: React.ReactNode }) {
+  const [utilitiesOpen, setUtilitiesOpen] = React.useState(false);
+  const utilities = React.useMemo(
+    () => ({ open: utilitiesOpen, setOpen: setUtilitiesOpen }),
+    [utilitiesOpen],
+  );
+
   return (
-    <div className="w-full shrink-0 border-b border-input bg-card shadow-sm">
-      <header className={appHeaderClassName(compact)}>{children}</header>
-    </div>
+    <MobileHeaderUtilitiesContext.Provider value={utilities}>
+      <div className="w-full shrink-0 border-b border-input bg-card shadow-sm">
+        <header className={appHeaderClassName(compact)}>{children}</header>
+        <MobileHeaderUtilityRow />
+      </div>
+    </MobileHeaderUtilitiesContext.Provider>
   );
 }
 
@@ -471,31 +497,83 @@ function TopNavMobileMenu() {
   );
 }
 
-function HeaderActions() {
+function HeaderUtilityActions() {
   return (
-    <div className={headerActionsToolbarClassName()}>
+    <>
       <CommandPaletteTrigger />
       <NotificationsPopover />
       <LanguageMenu />
       <ThemeMenu />
+    </>
+  );
+}
+
+function MobileHeaderUtilitiesToggle() {
+  const { t } = useTranslation();
+  const { open, setOpen } = useMobileHeaderUtilities();
+
+  return (
+    <Button
+      type="button"
+      variant="ghost"
+      size="icon"
+      className="h-9 w-9 md:hidden"
+      aria-expanded={open}
+      aria-label={
+        open
+          ? t('nav.collapseHeaderTools', 'Hide header tools')
+          : t('nav.expandHeaderTools', 'Show header tools')
+      }
+      onClick={() => setOpen((prev) => !prev)}
+    >
+      <ChevronDown
+        className={cn('h-4 w-4 transition-transform duration-200', open && 'rotate-180')}
+        aria-hidden
+      />
+    </Button>
+  );
+}
+
+function HeaderActionsToolbar() {
+  return (
+    <div className={headerActionsToolbarClassName()}>
+      <div className="hidden items-center gap-1 md:flex md:gap-2">
+        <HeaderUtilityActions />
+      </div>
+      <MobileHeaderUtilitiesToggle />
       <UserMenu />
+    </div>
+  );
+}
+
+/** Utility strip below the header on small screens (search, alerts, locale, theme). */
+function MobileHeaderUtilityRow() {
+  const { open } = useMobileHeaderUtilities();
+
+  if (!open) return null;
+
+  return (
+    <div className="border-t border-input md:hidden">
+      <div className="flex items-center justify-center gap-1 px-4 py-2">
+        <HeaderUtilityActions />
+      </div>
     </div>
   );
 }
 
 function SidebarHeaderBar({ compact = false }: { compact?: boolean }) {
   return (
-    <AppHeaderBar compact={compact}>
+    <AppHeaderChrome compact={compact}>
       <SidebarTrigger className="shrink-0" />
       <BreadcrumbsAuto variant="header" className="min-w-0 flex-1" />
-      <HeaderActions />
-    </AppHeaderBar>
+      <HeaderActionsToolbar />
+    </AppHeaderChrome>
   );
 }
 
 function TopNavHeader() {
   return (
-    <AppHeaderBar>
+    <AppHeaderChrome>
       <div className="lg:hidden">
         <TopNavMobileMenu />
       </div>
@@ -504,10 +582,8 @@ function TopNavHeader() {
         <span className="min-w-0 truncate text-sm font-semibold">{APP_TITLE}</span>
       </div>
       <TopNav />
-      <div className="shrink-0">
-        <HeaderActions />
-      </div>
-    </AppHeaderBar>
+      <HeaderActionsToolbar />
+    </AppHeaderChrome>
   );
 }
 
