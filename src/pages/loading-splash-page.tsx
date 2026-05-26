@@ -11,7 +11,10 @@ export default function LoadingSplashPage() {
   return (
     <div
       data-route-loading
-      className="flex min-h-screen flex-col items-center justify-center gap-4 bg-gradient-to-br from-primary/10 via-background to-accent/5 p-6 text-center"
+      role="status"
+      aria-live="polite"
+      aria-busy="true"
+      className="fixed inset-0 z-50 flex min-h-dvh w-full flex-col items-center justify-center gap-4 bg-gradient-to-br from-primary/10 via-background to-accent/5 p-6 text-center"
     >
       <div className="flex h-14 w-14 animate-pulse items-center justify-center rounded-2xl bg-background shadow-lg ring-1 ring-border">
         <img src="/tailtheme.png" alt={`${APP_TITLE} logo`} className="h-10 w-10 object-contain" />
