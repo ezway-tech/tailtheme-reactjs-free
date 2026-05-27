@@ -10,6 +10,11 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui';
 import { useTheme } from '@/hooks/use-theme';
+import { cn } from '@/lib/cn';
+import {
+  headerFloatingPanelWidthClassName,
+  useHeaderFloatingPanel,
+} from '@/lib/header-floating-panel';
 
 /**
  * Header dropdown that exposes Light / Dark / System theme options.
@@ -18,6 +23,8 @@ import { useTheme } from '@/hooks/use-theme';
 export function ThemeMenu() {
   const { t } = useTranslation();
   const { theme, setTheme, resolvedTheme } = useTheme();
+  const { align, sideOffset, collisionPadding, isMobile } = useHeaderFloatingPanel();
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -30,7 +37,12 @@ export function ThemeMenu() {
           {resolvedTheme === 'dark' ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent
+        align={align}
+        sideOffset={sideOffset}
+        collisionPadding={collisionPadding}
+        className={cn(headerFloatingPanelWidthClassName(isMobile, 'w-48'))}
+      >
         <DropdownMenuLabel>{t('common:theme.label', 'Theme')}</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem onClick={() => setTheme('light')}>

@@ -15,6 +15,12 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui';
 import { clearAuthSession, readAuthSessionUser } from '@/lib/auth-session';
+import {
+  HEADER_FLOATING_PANEL_MOBILE_QUERY,
+  headerFloatingPanelWidthClassName,
+} from '@/lib/header-floating-panel';
+import { useMediaQuery } from '@/hooks/use-media-query';
+import { cn } from '@/lib/cn';
 import { urls } from '@/routes/urls';
 
 export interface UserMenuUser {
@@ -44,6 +50,7 @@ function resolveMenuUser(userProp?: UserMenuUser): UserMenuUser {
 export function UserMenu({ user: userProp }: { user?: UserMenuUser }) {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const isMobile = useMediaQuery(HEADER_FLOATING_PANEL_MOBILE_QUERY);
   const [open, setOpen] = useState(false);
   const logoutPendingRef = useRef(false);
   const [user] = useState(() => resolveMenuUser(userProp));
@@ -81,7 +88,12 @@ export function UserMenu({ user: userProp }: { user?: UserMenuUser }) {
           </Avatar>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-60 p-2">
+      <DropdownMenuContent
+        align="end"
+        sideOffset={isMobile ? 10 : 4}
+        collisionPadding={isMobile ? 16 : undefined}
+        className={cn('p-2', headerFloatingPanelWidthClassName(isMobile, 'w-60'))}
+      >
         <DropdownMenuLabel className="px-2 py-2.5">
           <div className="flex flex-col gap-0.5">
             <span className="text-sm font-semibold text-foreground">{user.name}</span>

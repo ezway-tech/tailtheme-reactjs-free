@@ -16,6 +16,10 @@ import {
   type NotificationKind,
 } from '@/mocks/fixtures/notifications';
 import { cn } from '@/lib/cn';
+import {
+  headerFloatingPanelWidthClassName,
+  useHeaderFloatingPanel,
+} from '@/lib/header-floating-panel';
 import { MotionList, MotionListItem } from '@/components/motion';
 
 const KIND_ICON: Record<NotificationKind, React.ComponentType<{ className?: string }>> = {
@@ -38,6 +42,7 @@ const KIND_TONE: Record<NotificationKind, string> = {
  */
 export function NotificationsPopover() {
   const { t } = useTranslation();
+  const { align, sideOffset, collisionPadding, isMobile } = useHeaderFloatingPanel();
   const [items, setItems] = useState<NotificationItem[]>(sampleNotifications);
   const unreadCount = items.filter((n) => !n.read).length;
 
@@ -62,7 +67,12 @@ export function NotificationsPopover() {
           ) : null}
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-[22rem] p-0 sm:w-96" align="end">
+      <PopoverContent
+        align={align}
+        sideOffset={sideOffset}
+        collisionPadding={collisionPadding}
+        className={cn('p-0', headerFloatingPanelWidthClassName(isMobile, 'w-[22rem] sm:w-96'))}
+      >
         <div className="flex items-center justify-between gap-3 border-b border-input px-4 py-3.5">
           <div className="flex min-w-0 items-center gap-2.5">
             <span className="text-sm font-semibold text-foreground">

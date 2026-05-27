@@ -9,6 +9,11 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui';
 import i18n, { persistLanguage, SUPPORTED_LANGUAGES, type SupportedLanguage } from '@/i18n';
+import { cn } from '@/lib/cn';
+import {
+  headerFloatingPanelWidthClassName,
+  useHeaderFloatingPanel,
+} from '@/lib/header-floating-panel';
 import { LanguageFlag } from './language-flag';
 
 /**
@@ -16,6 +21,7 @@ import { LanguageFlag } from './language-flag';
  */
 export function LanguageMenu() {
   const { t, i18n: i18nInstance } = useTranslation();
+  const { align, sideOffset, collisionPadding, isMobile } = useHeaderFloatingPanel();
   const current = (i18nInstance.resolvedLanguage as SupportedLanguage | undefined) ?? 'en';
 
   const setLang = (lang: SupportedLanguage) => {
@@ -35,7 +41,12 @@ export function LanguageMenu() {
           <LanguageFlag language={current} size="md" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-60 p-2">
+      <DropdownMenuContent
+        align={align}
+        sideOffset={sideOffset}
+        collisionPadding={collisionPadding}
+        className={cn('p-2', headerFloatingPanelWidthClassName(isMobile, 'w-60'))}
+      >
         <DropdownMenuLabel className="px-2 py-2 text-xs font-medium text-muted-foreground">
           {t('common:language', 'Language')}
         </DropdownMenuLabel>
