@@ -63,7 +63,7 @@ export function AuthSocialProviders({
               navigate(urls.app.dashboard);
             }}
           >
-            <provider.Icon className="h-4 w-4 shrink-0" />
+            <img src={provider.Icon} alt="" aria-hidden="true" className="h-4 w-4 shrink-0" />
             <span>{provider.label}</span>
           </Button>
         ))}

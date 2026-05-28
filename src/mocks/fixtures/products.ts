@@ -1,3 +1,10 @@
+import productSoftMerinoSweaterImage from '@/assets/image/product-soft-merino-sweater.jpg';
+import productLeatherLaptopSleeveImage from '@/assets/image/product-leather-laptop-sleeve.jpg';
+import productCeramicCoffeeSetImage from '@/assets/image/product-ceramic-coffee-set.jpg';
+import productNoiseCancellingHeadphonesImage from '@/assets/image/product-noise-cancelling-headphones.jpg';
+import productMinimalToteBagImage from '@/assets/image/product-minimal-tote-bag.jpg';
+import productAromaDiffuserImage from '@/assets/image/product-aroma-diffuser.jpg';
+
 export interface SampleProduct {
   id: string;
   slug: string;
@@ -23,8 +30,7 @@ export const sampleProducts: SampleProduct[] = [
     rating: 4.6,
     reviews: 128,
     inStock: true,
-    image:
-      'https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=640&q=60',
+    image: productSoftMerinoSweaterImage,
     description: 'Cozy 100% merino wool sweater, perfect for layering through the seasons.',
   },
   {
@@ -36,8 +42,7 @@ export const sampleProducts: SampleProduct[] = [
     rating: 4.3,
     reviews: 54,
     inStock: true,
-    image:
-      'https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&w=640&q=60',
+    image: productLeatherLaptopSleeveImage,
     description: 'Full-grain leather sleeve with soft felt interior. Fits 14" laptops.',
   },
   {
@@ -49,8 +54,7 @@ export const sampleProducts: SampleProduct[] = [
     rating: 4.8,
     reviews: 302,
     inStock: true,
-    image:
-      'https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=640&q=60',
+    image: productCeramicCoffeeSetImage,
     description: 'Handmade ceramic mugs — set of 4 in neutral earth tones.',
   },
   {
@@ -63,8 +67,7 @@ export const sampleProducts: SampleProduct[] = [
     rating: 4.7,
     reviews: 891,
     inStock: false,
-    image:
-      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=640&q=60',
+    image: productNoiseCancellingHeadphonesImage,
     description: 'Studio-grade active noise cancellation with 30-hour battery.',
   },
   {
@@ -76,8 +79,7 @@ export const sampleProducts: SampleProduct[] = [
     rating: 4.2,
     reviews: 41,
     inStock: true,
-    image:
-      'https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=640&q=60',
+    image: productMinimalToteBagImage,
     description: 'Organic cotton tote with reinforced stitching.',
   },
   {
@@ -89,8 +91,7 @@ export const sampleProducts: SampleProduct[] = [
     rating: 4.5,
     reviews: 212,
     inStock: true,
-    image:
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=640&q=60',
+    image: productAromaDiffuserImage,
     description: 'Ultra-quiet ultrasonic diffuser with 7 mood lights.',
   },
 ];
